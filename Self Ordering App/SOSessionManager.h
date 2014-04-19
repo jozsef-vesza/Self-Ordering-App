@@ -82,4 +82,8 @@
 
 - (void)saveUserData;
 
+- (NSDictionary *)loadStoredCredentials;
+
+- (void)manageCredentialStorageForState:(BOOL)aState;
+
 @end

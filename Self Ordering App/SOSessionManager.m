@@ -152,4 +152,31 @@
     }
 }
 
+- (void)manageCredentialStorageForState:(BOOL)aState
+{
+    if (aState)
+    {
+        [[NSUserDefaults standardUserDefaults] setObject:self.activeUser.userName forKey:storedUserNameKey];
+        [[NSUserDefaults standardUserDefaults] setObject:self.activeUser.password forKey:storedPasswordKey];
+    }
+    else
+    {
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:storedUserNameKey];
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:storedPasswordKey];
+    }
+}
+
+- (NSDictionary *)loadStoredCredentials
+{
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:storedUserNameKey] && [[NSUserDefaults standardUserDefaults] objectForKey:storedPasswordKey])
+    {
+        return @{
+                 @"username" : [[NSUserDefaults standardUserDefaults] objectForKey:storedUserNameKey],
+                 @"password" : [[NSUserDefaults standardUserDefaults] objectForKey:storedPasswordKey]
+                 };
+    }
+    
+    return nil;
+}
+
 @end

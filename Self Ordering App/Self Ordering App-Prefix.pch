@@ -30,6 +30,8 @@
 #define drinkKey @"drinks"
 #define alcoholicKey @"alcoholic"
 #define dessertsKey @"desserts"
+#define storedUserNameKey @"username"
+#define storedPasswordKey @"password"
 
 #define userMealsKey @"userMeals"
 

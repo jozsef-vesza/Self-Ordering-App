@@ -50,6 +50,11 @@
         self.passwordField.text = self.sessionManager.activeUser.password;
         [self performSegueWithIdentifier:@"loginSegue" sender:self];
     }
+    else if([self.sessionManager loadStoredCredentials] != nil)
+    {
+        self.userNameField.text = [self.sessionManager loadStoredCredentials][@"username"];
+        self.passwordField.text = [self.sessionManager loadStoredCredentials][@"password"];
+    }
     else
     {
         self.userNameField.text = nil;
@@ -80,6 +85,7 @@
             self.hud.labelText = @"Sikeres bejelentkezés";
             [self.hud hide:YES afterDelay:1.0];
         });
+        [self.sessionManager manageCredentialStorageForState:self.rememberSwitch.on];
         [self performSegueWithIdentifier:@"loginSegue" sender:self];
     }
     onError:^(NSError *error)
