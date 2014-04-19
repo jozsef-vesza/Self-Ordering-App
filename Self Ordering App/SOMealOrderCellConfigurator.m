@@ -23,8 +23,8 @@
     SOSimpleMealCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"EmbeddedMeal" owner:self options:nil] lastObject];
     
     cell.mealNameLabel.text = orderInCell.mealName;
-    cell.mealAmountField.text = [NSString stringWithFormat:@"%d", orderInCell.numberOfMealsOrdered];
-    cell.mealPriceLabel.text = [NSString stringWithFormat:@"%d", orderInCell.numberOfMealsOrdered * orderInCell.mealPrice];
+    cell.mealAmountField.text = [NSString stringWithFormat:@"%ld", (long)orderInCell.numberOfMealsOrdered];
+    cell.mealPriceLabel.text = [NSString stringWithFormat:@"%ld", orderInCell.numberOfMealsOrdered * orderInCell.mealPrice];
     cell.userInteractionEnabled = NO;
     
     return cell;

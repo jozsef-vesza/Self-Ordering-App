@@ -28,9 +28,9 @@
     SOMeal *orderInCell = (SOMeal *)anObject;
     
     currentCell.mealNameLabel.text = orderInCell.mealName;
-    currentCell.mealAmountField.text = [NSString stringWithFormat:@"%d", orderInCell.numberOfMealsOrdered];
+    currentCell.mealAmountField.text = [NSString stringWithFormat:@"%ld", (long)orderInCell.numberOfMealsOrdered];
     currentCell.mealAmountField.userInteractionEnabled = NO;
-    currentCell.mealPriceLabel.text = [NSString stringWithFormat:@"%d Ft/db", orderInCell.mealPrice];
+    currentCell.mealPriceLabel.text = [NSString stringWithFormat:@"%ld Ft/db", (long)orderInCell.mealPrice];
     currentCell.mealAmountStepper.value = orderInCell.numberOfMealsOrdered;
     currentCell.mealAmountStepper.minimumValue = 0;
     currentCell.mealAmountStepper.maximumValue = 99;

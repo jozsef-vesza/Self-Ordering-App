@@ -20,13 +20,13 @@
                                 <rect key="frame" x="40" y="244" width="240" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Jelszó" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zed-HW-1h1">
                                 <rect key="frame" x="40" y="294" width="240" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jegyezz meg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGw-Z0-eeC">
                                 <rect key="frame" x="40" y="354" width="101" height="21"/>
@@ -323,7 +323,7 @@
                 <viewController id="6v5-I7-mMN" customClass="SORestaurantBillController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Rendelések" id="z4N-LG-BwG"/>
                     <connections>
-                        <segue destination="mR4-Np-fGD" kind="push" identifier="paymentSuccessSegue" id="8fJ-ro-GOH"/>
+                        <segue destination="wI2-g7-7zV" kind="modal" identifier="paymentSuccessSegue" id="8fJ-ro-GOH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVE-IP-QGd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -424,7 +424,7 @@
                         <viewControllerLayoutGuide type="bottom" id="X97-LO-uHl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ro3-JZ-p7i">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sikeres fizetés!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDq-Se-dLn">
@@ -442,7 +442,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="h7n-xx-JuF">
-                                <rect key="frame" x="0.0" y="166" width="320" height="353"/>
+                                <rect key="frame" x="0.0" y="166" width="320" height="402"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -512,7 +512,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jx0-5r-Rll" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4915" y="797"/>
+            <point key="canvasLocation" x="5441" y="797"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nQL-6j-gPV">
@@ -576,7 +576,7 @@
                                                     <rect key="frame" x="20" y="7" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -598,7 +598,7 @@
                                                     <rect key="frame" x="20" y="7" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -614,7 +614,7 @@
                                                     <rect key="frame" x="20" y="7" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -634,7 +634,7 @@
                                                     <rect key="frame" x="20" y="7" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -650,7 +650,7 @@
                                                     <rect key="frame" x="20" y="7" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -676,9 +676,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="emailField" destination="tk5-8C-6BA" id="RrP-Kc-BKK"/>
+                        <outlet property="emailField" destination="e5G-DQ-tfX" id="sM3-Ol-Nwt"/>
                         <outlet property="firstNameField" destination="tk5-8C-6BA" id="tiS-9j-eYt"/>
-                        <outlet property="lastNameField" destination="tk5-8C-6BA" id="WM2-Tt-h7i"/>
+                        <outlet property="lastNameField" destination="zA8-lJ-aov" id="LbE-f2-XaI"/>
                         <outlet property="passwordField" destination="aTY-y7-6hI" id="anV-Ha-eUN"/>
                         <outlet property="userNameField" destination="S0u-t4-OhQ" id="kws-ao-pr7"/>
                     </connections>
@@ -1224,6 +1224,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQN-if-fUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4068" y="23"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NvQ-DS-Axc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wI2-g7-7zV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Zmw-PV-VsC"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jB5-Qf-f2f">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mR4-Np-fGD" kind="relationship" relationship="rootViewController" id="Qir-Wo-znu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Acf-H8-N7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4915" y="797"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

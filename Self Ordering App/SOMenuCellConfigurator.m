@@ -28,8 +28,8 @@
     {
         SOSimpleMealCell *simpleCell = (SOSimpleMealCell *)aCell;
         simpleCell.mealNameLabel.text = mealInCell.mealName;
-        simpleCell.mealPriceLabel.text = [NSString stringWithFormat:@"%d Ft", mealInCell.mealPrice];
-        simpleCell.mealAmountField.text = [NSString stringWithFormat:@"%d", mealInCell.numberOfMealsOrdered];
+        simpleCell.mealPriceLabel.text = [NSString stringWithFormat:@"%ld Ft", (long)mealInCell.mealPrice];
+        simpleCell.mealAmountField.text = [NSString stringWithFormat:@"%ld", (long)mealInCell.numberOfMealsOrdered];
         simpleCell.mealAmountField.userInteractionEnabled = NO;
         return simpleCell;
     }

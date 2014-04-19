@@ -34,7 +34,7 @@
     UITabBarItem *cartItem = self.tabBar.items[1];
     if ([self.sessionManager.activeUser.eventOrders count] > 0)
     {
-        cartItem.badgeValue = [NSString stringWithFormat:@"%d", [self.sessionManager.activeUser.eventOrders count]];
+        cartItem.badgeValue = [NSString stringWithFormat:@"%lu", (unsigned long)[self.sessionManager.activeUser.eventOrders count]];
     }
     else
     {

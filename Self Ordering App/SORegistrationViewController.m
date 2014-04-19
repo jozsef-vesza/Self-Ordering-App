@@ -8,13 +8,14 @@
 
 #import "SORegistrationViewController.h"
 
-@interface SORegistrationViewController ()
+@interface SORegistrationViewController ()<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *userNameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UITextField *lastNameField;
 @property (weak, nonatomic) IBOutlet UITextField *firstNameField;
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
+@property (copy, nonatomic) NSArray *fieldsArray;
 
 @property (strong, nonatomic) MBProgressHUD *hud;
 
@@ -27,6 +28,11 @@
     [super viewDidLoad];
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
     tapRecognizer.cancelsTouchesInView = NO;
+    self.fieldsArray = @[self.userNameField, self.passwordField, self.emailField, self.firstNameField, self.lastNameField];
+    for (UITextField *field in self.fieldsArray)
+    {
+        field.delegate = self;
+    }
     [self.view addGestureRecognizer:tapRecognizer];
 }
 
@@ -70,6 +76,22 @@
 - (void)handleSingleTap:(UITapGestureRecognizer *)sender
 {
     [self.view endEditing:YES];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSInteger index = [self.fieldsArray indexOfObject:textField];
+    if (![textField isEqual:[self.fieldsArray lastObject]])
+    {
+        [self.fieldsArray[index + 1] becomeFirstResponder];
+    }
+    else
+    {
+        [textField resignFirstResponder];
+        [self doneButtonPressed:nil];
+    }
+    
+    return YES;
 }
 
 @end

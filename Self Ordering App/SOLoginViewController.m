@@ -107,8 +107,15 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [textField resignFirstResponder];
-    if ([textField isEqual:self.passwordField]) [self loginButtonPressed:nil];
+    if ([textField isEqual:self.userNameField])
+    {
+        [self.passwordField becomeFirstResponder];
+    }
+    if ([textField isEqual:self.passwordField])
+    {
+        [textField resignFirstResponder];
+        [self loginButtonPressed:nil];
+    }
     return YES;
 }
 

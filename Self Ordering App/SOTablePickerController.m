@@ -76,7 +76,7 @@
         if ([table pointInside:tapPoint withEvent:nil])
         {
             SOTable *tappedTable = self.location.tables[[self.tables indexOfObject:table]];
-            self.detailsLabel.text = [NSString stringWithFormat:@"Asztal %d fő részére: %@", tappedTable.numberOfSeats, tappedTable.free ? @"Szabad" : @"Foglalt"];
+            self.detailsLabel.text = [NSString stringWithFormat:@"Asztal %ld fő részére: %@", (long)tappedTable.numberOfSeats, tappedTable.free ? @"Szabad" : @"Foglalt"];
             self.selectedTable = tappedTable;
             self.detailsLabel.textAlignment = NSTextAlignmentCenter;
             [self.view addSubview:self.detailsLabel];

@@ -42,13 +42,15 @@
 {
     [super viewWillDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [self.view removeFromSuperview];
 }
 
 - (void)setupViewElements
 {
     self.tabBarController.navigationItem.title = @"Rendelések";
-    self.tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Fizetés" style:UIBarButtonItemStyleDone target:self action:@selector(payButtonPressed)];
+    if ([self.view isEqual:self.billView])
+    {
+        self.tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Fizetés" style:UIBarButtonItemStyleDone target:self action:@selector(payButtonPressed)];
+    }
     self.hud = [[MBProgressHUD alloc] initWithView:self.view];
     [self.view addSubview:self.hud];
 }
@@ -68,7 +70,6 @@
     if (!_billView)
     {
         _billView = [[[NSBundle mainBundle] loadNibNamed:@"RestaurantBillView" owner:self options:nil] lastObject];
-        _billView.ordersTableView.backgroundColor = [UIColor redColor];
         _billView.ordersTableView.contentInset = UIEdgeInsetsMake
         (
          CGRectGetHeight([[UIApplication sharedApplication] statusBarFrame]) + CGRectGetHeight(self.navigationController.navigationBar.frame),
@@ -82,13 +83,12 @@
 
 - (void)setupDefaultView
 {
-    BOOL activeUserHasOrderedEvents = [[SOSessionManager sharedInstance].activeUser.mealOrders count] > 0;
+    BOOL activeUserHasOrderedEvents =  [SOSessionManager sharedInstance].activeUser.mealOrders && [[SOSessionManager sharedInstance].activeUser.mealOrders count] > 0;
     if (activeUserHasOrderedEvents)
     {
         self.dataSource = [[JVTableViewDataSource alloc] initWithItems:[SOSessionManager sharedInstance].activeUser.mealOrders];
         self.dataSource.cellConfiguratorDelegate = [[SOMealOrderCellConfigurator alloc] init];
         [self setupBillView];
-        
         self.view = self.billView;
     }
     else
