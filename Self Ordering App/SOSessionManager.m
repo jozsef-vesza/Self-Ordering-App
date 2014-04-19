@@ -145,11 +145,8 @@
 - (void)saveUserData
 {
     NSArray *orderedEvents = self.activeUser.eventOrders;
-    BOOL activeUserHasUnpaidItems = [orderedEvents count] > 0;
-    if (activeUserHasUnpaidItems)
-    {
-        [self saveDownloadedItems:orderedEvents to:userEventsKey];
-    }
+    [self saveDownloadedItems:orderedEvents to:userEventsKey];
+
 }
 
 - (void)manageCredentialStorageForState:(BOOL)aState
