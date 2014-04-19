@@ -31,14 +31,14 @@
 {
     [super viewDidLoad];
     self.eventManager = [SOEventManager sharedInstance];
-    self.eventAlreadyPaid = self.eventManager.selectedEvent.isPaid;
     [self setupViews];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    if (self.eventAlreadyPaid) self.navigationItem.rightBarButtonItem.title = @"Részletek";
+    BOOL eventIsPaid = self.eventManager.selectedEvent.isPaid;
+    if (eventIsPaid) self.navigationItem.rightBarButtonItem.title = @"Részletek";
     else self.navigationItem.rightBarButtonItem.title = @"Vásárlás";
 }
 
@@ -49,15 +49,16 @@
     self.eventDateLabel.text = [NSString stringWithFormat:@"%@", currentEvent.eventDate];
     self.eventDescriptionText.text = currentEvent.eventDescription;
     self.eventDescriptionText.editable = NO;
-    self.eventTicketsLabel.text = [NSString stringWithFormat:@"%d db jegy", currentEvent.numberOfTicketsOrdered];
-    self.eventPriceLabel.text = [NSString stringWithFormat:@"%d Ft (%d Ft/db)", currentEvent.ticketPrice * currentEvent.numberOfTicketsOrdered, currentEvent.ticketPrice];
+    self.eventTicketsLabel.text = [NSString stringWithFormat:@"%ld db jegy", (long)currentEvent.numberOfTicketsOrdered];
+    self.eventPriceLabel.text = [NSString stringWithFormat:@"%ld Ft (%ld Ft/db)", currentEvent.ticketPrice * currentEvent.numberOfTicketsOrdered, (long)currentEvent.ticketPrice];
 }
 
 #pragma mark - User interaction
 
 - (IBAction)purchaseButtonPressed:(UIBarButtonItem *)sender
 {
-    if (self.eventAlreadyPaid)
+    BOOL eventIsPaid = self.eventManager.selectedEvent.isPaid;
+    if (eventIsPaid)
     {
         [self performSegueWithIdentifier:@"ticketSegue" sender:self];
     }
@@ -65,25 +66,13 @@
     {
         [self.eventManager sendOrderForEvent:self.eventManager.selectedEvent forUser:[SOSessionManager sharedInstance].activeUser onComplete:^(SOEvent *event)
         {
-            NSLog(@"%hhd", event.isPaid);
+            self.eventManager.selectedEvent = event;
             [self performSegueWithIdentifier:@"ticketSegue" sender:self];
         }
         onError:^(NSError *error)
         {
             NSLog(@"Error: %@", error);
         }];
-    }
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if (self.eventAlreadyPaid)
-    {
-        
-    }
-    else
-    {
-        
     }
 }
 

@@ -61,6 +61,7 @@
     {
         [self.networkManager downloadEventsOnComplete:^(NSArray *events)
         {
+            [self clearItemsOnComplete:nil];
             [self sortArray:events];
             [self saveEvents];
             aCompletionHandler(self.eventsArray);
@@ -80,7 +81,10 @@
     [_regularCellItems removeAllObjects];
     [_promotedCellItems removeAllObjects];
     [_multiCellItems removeAllObjects];
-    aCompletionHandler();
+    if (aCompletionHandler)
+    {
+        aCompletionHandler();
+    }
 }
 
 - (void)saveEvents
@@ -111,33 +115,27 @@
 - (void)removeEventFromCart:(SOEvent *)anEvent forUser:(SOUser *)anUser onComplete:(void (^)())aCompletionHandler
 {
     NSMutableArray *tempCart = nil;
-    switch (anEvent.isPaid)
+    if (anEvent.isPaid)
     {
-        case 1:
+        tempCart = [anUser.paidEventOrders mutableCopy];
+        [self.networkManager deleteEventOrder:anEvent forUser:anUser onComplete:^()
         {
-            tempCart = [anUser.paidEventOrders mutableCopy];
-            [self.networkManager deleteEventOrder:anEvent forUser:anUser onComplete:^()
-            {
-                [tempCart removeObject:anEvent];
-                anUser.paidEventOrders = [tempCart copy];
-                aCompletionHandler();
-            }
-            onError:^(NSError *error)
-            {
-                NSLog(@"Error while deleting object: %@", error);
-            }];
-            break;
-        }
-        default:
-        {
-            tempCart = [anUser.eventOrders mutableCopy];
             [tempCart removeObject:anEvent];
-            anUser.eventOrders = [tempCart copy];
+            anUser.paidEventOrders = [tempCart copy];
             aCompletionHandler();
-            break;
         }
+        onError:^(NSError *error)
+        {
+            NSLog(@"Error while deleting object: %@", error);
+        }];
     }
-
+    else
+    {
+        tempCart = [anUser.eventOrders mutableCopy];
+        [tempCart removeObject:anEvent];
+        anUser.eventOrders = [tempCart copy];
+        aCompletionHandler();
+    }
     
 }
 

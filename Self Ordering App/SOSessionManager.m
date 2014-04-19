@@ -121,8 +121,14 @@
     NSString *filePath = [documentsDirectoryPath stringByAppendingPathComponent:aPath];
     NSError *error;
     
-    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) [[NSFileManager defaultManager] removeItemAtPath:filePath error:&error];
-    if (error) NSLog(@"Error while deleting from cache: %@",error);
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath])
+    {
+        [[NSFileManager defaultManager] removeItemAtPath:filePath error:&error];
+    }
+    if (error)
+    {
+        NSLog(@"Error while deleting from cache: %@",error);
+    }
 }
 
 - (void)clearSessionCache

@@ -50,7 +50,6 @@
         _paidEventOrders = [self parseEventsFromResponse:aDictionary[@"orderedEvents"]];
         _eventOrders = [[SOSessionManager sharedInstance] loadSavedItemsFromPath:userEventsKey];
         _mealOrders = [self parseMealsFromResponse:aDictionary[@"orderedMeals"]];
-//        _tempMealOrders = [[SOSessionManager sharedInstance] loadSavedItemsFromPath:userMealsKey];
         NSNumber *idNum = aDictionary[@"identifier"];
         _identifier = idNum ? idNum : nil;
     }

@@ -59,7 +59,6 @@
     if (!_ordersTableView)
     {
         _ordersTableView = [[UITableView alloc] init];
-        _ordersTableView.backgroundColor = [UIColor redColor];
         _ordersTableView.contentInset =
         UIEdgeInsetsMake
         (
