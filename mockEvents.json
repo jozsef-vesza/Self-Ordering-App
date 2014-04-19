@@ -1,0 +1,77 @@
+ [
+  {
+  "eventTitle": "The Golden Voice of Gospel, Takács Nikolas és a Fool Moon",
+  "eventDate": "Dec 29, 2013 8:00:00 PM",
+  "eventDuration": 120,
+  "ticketsLeft": 0,
+  "eventDescription": {
+  "value": "Az amerikai templomok hangulatát hozza Budapestre egy igazán különleges produkció december 29-én, kedden este a Syma Rendezvényközpontba. The Golden Voice of Gospel egy izgalmas turné keretében járja a világot, hogy hangszeres és tradicionális kórustémákon keresztül mutassa be a gospel szépségeit. 2000-es indulásakor a formációt megálmodó Dwight Robson Tiszteletes a gospel műfaj legjobb amerikai képviselőit hívta meg együttesébe. Hosszú út vezetett Missouri St. Louis gettójából a mostani világturnéig, amelyen Robson már elismert Tiszteletesként hirdetheti az élet szeretetét."
+  },
+  "ticketPrice": 3444,
+  "location": "Budapest, Syma Rendezvénycsarnok",
+  "ticketsPurchased": 0,
+  "isPaid": false,
+  "priority": 3,
+  "identifier": 4644337115725824
+  },
+  {
+  "eventTitle": "Camouflage (D), Black Nail Cabaret",
+  "eventDate": "Dec 13, 2013 8:00:00 PM",
+  "eventDuration": 45,
+  "ticketsLeft": 50,
+  "eventDescription": {
+  "value": "Bár az együttes fénykorában nem juthatott el Budapestre most végre élőben is táncolhatunk a régi dalokra: az idén 30 éves Camouflage Dürer-kert nagytermében szerepel. A németek előtt pedig a hazai Black Nail Cabaret koncertjét láthatjuk, mely elektronikus zenei kirándulásra hív a szintipop és a darkwave világába. "
+  },
+  "ticketPrice": 1233,
+  "location": "Budapest, Dürer-kert",
+  "ticketsPurchased": 0,
+  "isPaid": false,
+  "priority": 2,
+  "identifier": 4785074604081152
+  },
+  {
+  "eventTitle": "Jose Carreras - Exkluzív karácsonyi koncert",
+  "eventDate": "Dec 20, 2013 8:00:00 PM",
+  "eventDuration": 80,
+  "ticketsLeft": 0,
+  "eventDescription": {
+  "value": "A tavalyi, nagysikerű pozsonyi José Carreras - Exkluzív Karácsonyi Koncertet követően idén Budepesten lesz a fantasztikus show, a Syma Rendezvényközpontban. Az Exkluzív Karácsonyi Koncerten 65 fős Kodály filharmónia és 40 tagú Kodály kórus kíséri José Carreras-t, mely egyedülálló műsornak ígérkezik. A maestróval továbbá fellép az ukrán származású Nataliya Kovalova is. "
+  },
+  "ticketPrice": 1400,
+  "location": "Budapest, Syma Rendezvénycsarnok",
+  "ticketsPurchased": 0,
+  "isPaid": false,
+  "priority": 2,
+  "identifier": 5066549580791808
+  },
+  {
+  "eventTitle": "The Singing Ringing Tree: Matuz Gergely (fuvola)",
+  "eventDate": "Dec 14, 2013 5:00:00 PM",
+  "eventDuration": 120,
+  "ticketsLeft": 12,
+  "eventDescription": {
+  "value": "A Kassák Múzeumban korábban rendszeresen voltak koncertek, most folytatódik ez a hagyomány. Az új sorozat a kortárs zenei életbe ad betekintést. Matuz Gergely fuvolaművész The Singing Ringing Tree című koncertjeinek darabjait Nagy Ákos zeneszerzővel közösen válogatta."
+  },
+  "ticketPrice": 10000,
+  "location": "Budapest, Kassák Múzeum",
+  "ticketsPurchased": 0,
+  "isPaid": false,
+  "priority": 2,
+  "identifier": 5910974510923776
+  },
+  {
+  "eventTitle": "Anja Djordjevic & Svetlana Maras : Canzone Distorte",
+  "eventDate": "Dec 15, 2013 9:00:00 PM",
+  "eventDuration": 120,
+  "ticketsLeft": 12,
+  "eventDescription": {
+  "value": "dsadsadsadsdsadasdsadsadsdsadsdasdsdasadsadsdasdas"
+  },
+  "ticketPrice": 5600,
+  "location": "Budapest, A38 Hajó",
+  "ticketsPurchased": 0,
+  "isPaid": false,
+  "priority": 3,
+  "identifier": 6473924464345088
+  }
+  ]

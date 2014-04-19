@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="simpleMealCell" id="4fq-Kz-jJG" customClass="SOSimpleMealCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4fq-Kz-jJG" id="2hT-IV-si5">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JEp-5v-coq">
+                        <rect key="frame" x="270" y="7" width="30" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="Ef7-Kx-hcA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3w-tj-yUq">
+                        <rect key="frame" x="202" y="11" width="60" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="7SS-BC-end"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Nd-Xu-XAJ">
+                        <rect key="frame" x="20" y="11" width="162" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerY" secondItem="JEp-5v-coq" secondAttribute="centerY" id="2pH-4i-dmu"/>
+                    <constraint firstItem="J3w-tj-yUq" firstAttribute="leading" secondItem="1Nd-Xu-XAJ" secondAttribute="trailing" constant="20" id="E9b-1C-MHo"/>
+                    <constraint firstAttribute="centerY" secondItem="J3w-tj-yUq" secondAttribute="centerY" id="QvT-c2-8Gp"/>
+                    <constraint firstItem="1Nd-Xu-XAJ" firstAttribute="leading" secondItem="2hT-IV-si5" secondAttribute="leading" constant="20" id="TxB-Ic-wcD"/>
+                    <constraint firstAttribute="centerY" secondItem="1Nd-Xu-XAJ" secondAttribute="centerY" id="leJ-Yh-pn0"/>
+                    <constraint firstItem="JEp-5v-coq" firstAttribute="leading" secondItem="J3w-tj-yUq" secondAttribute="trailing" constant="8" id="xeG-sz-9yb"/>
+                    <constraint firstAttribute="trailing" secondItem="JEp-5v-coq" secondAttribute="trailing" constant="20" id="zRu-3N-iC6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="mealAmountField" destination="JEp-5v-coq" id="MHa-wV-PqG"/>
+                <outlet property="mealNameLabel" destination="1Nd-Xu-XAJ" id="oLB-9E-Wpq"/>
+                <outlet property="mealPriceLabel" destination="J3w-tj-yUq" id="U36-Mw-KO2"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

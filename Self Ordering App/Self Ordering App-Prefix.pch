@@ -1,0 +1,40 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#define multiCellSelectionNotification @"multiCellSelectionNotification"
+#define promotedCellSelectionNotification @"promotedCellSelectionNotification"
+#define eventOrderRemovedNotification @"eventOrderRemoved"
+#define menuStepperChangedNotification @"menuStepperChanged"
+#define tempStepperChangedNotification @"tempStepperChanged"
+#define tipSliderChangedNotification @"tipSliderChanged"
+#define ratingChangedNotification @"ratingChanged"
+#define mealImageTappedNotification @"mealImageTappedNotification"
+#define saveMenuNotification @"saveMenuNotification"
+#define saveEventsNotification @"saveEventsNotification"
+
+#define userEventsKey @"userEvents"
+#define eventsKeyPath @"events"
+#define starterKey @"starters"
+#define soupKey @"soups"
+#define mainKey @"mainDishes"
+#define drinkKey @"drinks"
+#define alcoholicKey @"alcoholic"
+#define dessertsKey @"desserts"
+
+#define userMealsKey @"userMeals"
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "SOSessionManager.h"
+    #import "MBProgressHUD.h"
+#endif

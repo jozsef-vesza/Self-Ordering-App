@@ -1,0 +1,39 @@
+{
+  "customers": [
+    {
+      "userName": "1",
+      "password": "1",
+      "lastName": "1",
+      "firstName": "1",
+      "email": "1"
+    },
+    {
+      "userName": "user01",
+      "password": "12345",
+      "lastName": "1",
+      "firstName": "1",
+      "email": "1"
+    },
+    {
+      "userName": "user02",
+      "password": "1432",
+      "lastName": "1",
+      "firstName": "1",
+      "email": "1"
+    },
+    {
+      "userName": "user03",
+      "password": "1adds",
+      "lastName": "1",
+      "firstName": "1",
+      "email": "1"
+    },
+    {
+      "userName": "user04",
+      "password": "1ddsc",
+      "lastName": "1",
+      "firstName": "1",
+      "email": "1"
+    }
+  ]
+}

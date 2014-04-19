@@ -1,0 +1,67 @@
+{
+    "identifier": 4820258976169984,
+    "username": "1",
+    "password": "1",
+    "orderedEvents": [
+        {
+            "eventTitle": "Camouflage (D), Black Nail Cabaret",
+            "eventDate": "Dec 13, 2013 8:00:00 PM",
+            "eventDuration": 45,
+            "ticketsLeft": 50,
+            "eventDescription": {
+                "value": "Bár az együttes fénykorában nem juthatott el Budapestre most végre élőben is táncolhatunk a régi dalokra: az idén 30 éves Camouflage Dürer-kert nagytermében szerepel. A németek előtt pedig a hazai Black Nail Cabaret koncertjét láthatjuk, mely elektronikus zenei kirándulásra hív a szintipop és a darkwave világába. "
+            },
+            "ticketPrice": 0,
+            "location": "Budapest, Dürer-kert",
+            "ticketsPurchased": 0,
+            "isPaid": true,
+            "priority": 2,
+            "identifier": -3408252236272131000
+        },
+        {
+            "eventTitle": "Én, Kőhalmi Zoltán – önmusical",
+            "eventDate": "Dec 17, 2013 8:30:00 PM",
+            "eventDuration": 120,
+            "ticketsLeft": 12,
+            "eventDescription": {
+                "value": "Ha akadnak még Önnek fehér foltok Kőhalmi Zoltán életéből, esetleg éppen úgy érzi, mindent tud, vagy egyszerűen csak régóta vágyott rá,  itt a helye! Az ismert humoristát ezen az estén olyan  közelről ismerhetjük meg, ahogyan csak nagy formátumú bulvárszereplőket szokás. Kompromittáló felvételek, eltitkolt emlékek során Zoltán maga tart idegenvezetést életének múzeumában.Biztosan állítható,  hogy az előadás a saját nemében egyedülálló, hiszen még soha nem készült hasonló. A kitárulkozó önvallomás összművészeti élményt nyújt, feleslegessé téve ezzel bármely más kulturális esemény látogatást. A  nagy ívű előadásban lesz akció, izgalom, kisebb tömegjelenetek, állatidomítás (nem biztos), életvezetési tanácsok és minden, amit a Bocskai utca 8-ról tudni érdemes. Nevetés és leleplező információk az  egész családnak!"
+            },
+            "ticketPrice": 0,
+            "location": "Budapest, Corvin",
+            "ticketsPurchased": 2,
+            "isPaid": true,
+            "priority": 1,
+            "identifier": 2071427303701708500
+        },
+        {
+            "eventTitle": "The Singing Ringing Tree: Matuz Gergely (fuvola)",
+            "eventDate": "Dec 14, 2013 5:00:00 PM",
+            "eventDuration": 120,
+            "ticketsLeft": 12,
+            "eventDescription": {
+                "value": "A Kassák Múzeumban korábban rendszeresen voltak koncertek, most folytatódik ez a hagyomány. Az új sorozat a kortárs zenei életbe ad betekintést. Matuz Gergely fuvolaművész The Singing Ringing Tree című koncertjeinek darabjait Nagy Ákos zeneszerzővel közösen válogatta."
+            },
+            "ticketPrice": 10000,
+            "location": "Budapest, Kassák Múzeum",
+            "ticketsPurchased": 4,
+            "isPaid": true,
+            "priority": 2,
+            "identifier": 9097562072837125000
+        },
+        {
+            "eventTitle": "Camouflage (D), Black Nail Cabaret",
+            "eventDate": "Dec 13, 2013 8:00:00 PM",
+            "eventDuration": 45,
+            "ticketsLeft": 50,
+            "eventDescription": {
+                "value": "Bár az együttes fénykorában nem juthatott el Budapestre most végre élőben is táncolhatunk a régi dalokra: az idén 30 éves Camouflage Dürer-kert nagytermében szerepel. A németek előtt pedig a hazai Black Nail Cabaret koncertjét láthatjuk, mely elektronikus zenei kirándulásra hív a szintipop és a darkwave világába. "
+            },
+            "ticketPrice": 1233,
+            "location": "Budapest, Dürer-kert",
+            "ticketsPurchased": 64,
+            "isPaid": true,
+            "priority": 2,
+            "identifier": -8500140347743680000
+        }
+    ]
+}
