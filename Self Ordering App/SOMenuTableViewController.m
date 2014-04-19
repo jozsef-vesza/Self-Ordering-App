@@ -57,13 +57,19 @@
 - (void)setupViewElements
 {
     self.tabBarController.navigationItem.title = @"Étlap";
-    self.tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Rendelés" style:UIBarButtonItemStyleDone target:self action:@selector(orderButtonPressed)];
+    self.tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Összesítés" style:UIBarButtonItemStyleDone target:self action:@selector(orderButtonPressed)];
     NSArray *mealsArray = [self.dataSource selectedItems];
     BOOL selectedMealsExist = mealsArray && [mealsArray count] > 0;
     self.tabBarController.navigationItem.rightBarButtonItem.enabled = selectedMealsExist ? YES : NO;
     self.navigationController.toolbarHidden = YES;
     self.hud = [[MBProgressHUD alloc] initWithView:self.view];
     [self.view addSubview:self.hud];
+    
+    BOOL poppedToThisViewAfterPurchase = [[SOSessionManager sharedInstance].activeUser.tempMealOrders count] == 0 && [[self.dataSource selectedItems] count] > 0;
+    if (poppedToThisViewAfterPurchase)
+    {
+        [self.dataSource clearSelections];
+    }
 }
 
 -(void)setupDataSource
@@ -133,6 +139,7 @@
     [self.mealManager createTemporaryOrderForUser:[SOSessionManager sharedInstance].activeUser withItems:[self.dataSource selectedItems]];
     [self performSegueWithIdentifier:@"tempOrderSeque" sender:self];
 }
+
 
 #pragma mark - UITableViewDelegate
 

@@ -67,7 +67,7 @@
     [items addObject:spacer];
     
     UIBarButtonItem *item = [[UIBarButtonItem alloc] init];
-    item.title = [NSString stringWithFormat:@"Összesen: %d Ft", sumPrice];
+    item.title = [NSString stringWithFormat:@"Összesen: %ldFt", (long)sumPrice];
     item.width = CGRectGetWidth(self.view.frame);
     [items addObject:item];
     
@@ -110,7 +110,7 @@
             self.hud.labelText = @"Sikeres rendelés";
             [self.hud hide:YES afterDelay:1.0];
         });
-        //TODO: pop this shit
+        [self.navigationController popViewControllerAnimated:YES];
     }
     onError:^(NSError *error)
     {

@@ -137,6 +137,54 @@
     return selArray;
 }
 
+- (void)clearSelections
+{
+    for (SOMeal *meal in self.mealManager.soupsArray)
+    {
+        if (meal.numberOfMealsOrdered > 0)
+        {
+            meal.numberOfMealsOrdered = 0;
+        }
+    }
+    for (SOMeal *meal in self.mealManager.startersArray)
+    {
+        if (meal.numberOfMealsOrdered > 0)
+        {
+            meal.numberOfMealsOrdered = 0;
+        }
+    }
+    for (SOMeal *meal in self.mealManager.mainDishesArray)
+    {
+        if (meal.numberOfMealsOrdered > 0)
+        {
+            meal.numberOfMealsOrdered = 0;
+        }
+    }
+    for (SOMeal *meal in self.mealManager.dessertsArray)
+    {
+        if (meal.numberOfMealsOrdered > 0)
+        {
+            meal.numberOfMealsOrdered = 0;
+        }
+    }
+    for (SOMeal *meal in self.mealManager.drinksArray)
+    {
+        if (meal.numberOfMealsOrdered > 0)
+        {
+            meal.numberOfMealsOrdered = 0;
+        }
+    }
+    for (SOMeal *meal in self.mealManager.alcoholicDrinksArray)
+    {
+        if (meal.numberOfMealsOrdered > 0)
+        {
+            meal.numberOfMealsOrdered = 0;
+        }
+    }
+    
+    self.expandedIndexPath = nil;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     id itemAtIndexPath = nil;

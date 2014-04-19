@@ -17,4 +17,5 @@
 - (NSIndexPath *)actualIndexPathForTappedIndexPath:(NSIndexPath *)anIndexPath;
 - (SOMeal *)mealAtIndex:(NSIndexPath *)anIndexPath;
 - (NSArray *)selectedItems;
+- (void)clearSelections;
 @end

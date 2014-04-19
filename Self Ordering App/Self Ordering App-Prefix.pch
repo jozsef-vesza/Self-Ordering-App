@@ -20,6 +20,7 @@
 #define mealImageTappedNotification @"mealImageTappedNotification"
 #define saveMenuNotification @"saveMenuNotification"
 #define saveEventsNotification @"saveEventsNotification"
+#define shouldClearMenuNotification @"shouldClearMenuNotification"
 
 #define userEventsKey @"userEvents"
 #define eventsKeyPath @"events"
