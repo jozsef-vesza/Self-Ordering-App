@@ -80,4 +80,6 @@
  */
 - (void)clearSessionCache;
 
+- (void)saveUserData;
+
 @end

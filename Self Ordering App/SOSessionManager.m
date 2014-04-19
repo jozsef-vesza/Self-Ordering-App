@@ -77,7 +77,7 @@
 
 - (void)logoutOnComplete:(void (^)())aCompletionHandler;
 {
-    [self saveDownloadedItems:self.activeUser.eventOrders to:userEventsKey];
+    [self saveUserData];
     [self clearSessionCache];
     self.activeUser = nil;
     aCompletionHandler();
@@ -140,6 +140,16 @@
     [self deleteSavedItemsFromPath:dessertsKey];
     [self deleteSavedItemsFromPath:drinkKey];
     [self deleteSavedItemsFromPath:alcoholicKey];
+}
+
+- (void)saveUserData
+{
+    NSArray *orderedEvents = self.activeUser.eventOrders;
+    BOOL activeUserHasUnpaidItems = [orderedEvents count] > 0;
+    if (activeUserHasUnpaidItems)
+    {
+        [self saveDownloadedItems:orderedEvents to:userEventsKey];
+    }
 }
 
 @end

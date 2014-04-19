@@ -12,6 +12,7 @@
 @interface SOEventDetailViewController () <UIAlertViewDelegate>
 
 @property (nonatomic,strong) SOEventManager *eventManager;
+@property (strong, nonatomic) MBProgressHUD *hud;
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
@@ -34,6 +35,19 @@
     [self checkForTickets];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.hud = [[MBProgressHUD alloc] initWithView:self.view];
+    [self.view addSubview:self.hud];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.hud removeFromSuperview];
+}
+
 - (void)setupView
 {
     self.titleLabel.text = self.eventManager.selectedEvent.eventTitle;
@@ -47,7 +61,7 @@
     self.ticketCountStepper.wraps = NO;
     self.ticketCountStepper.autorepeat = YES;
     self.ticketCountStepper.continuous = YES;
-    self.priceLabel.text = [NSString stringWithFormat:@"%d Ft", self.eventManager.selectedEvent.ticketPrice];
+    self.priceLabel.text = [NSString stringWithFormat:@"%ld Ft", (long)self.eventManager.selectedEvent.ticketPrice];
     self.navigationItem.rightBarButtonItem.enabled = NO;
 }
 
@@ -66,7 +80,7 @@
 - (IBAction)ticketCountChanged:(UIStepper *)sender
 {
     self.ticketCountField.text = [NSString stringWithFormat:@"%d", (int)sender.value];
-    self.priceLabel.text = [NSString stringWithFormat:@"%d Ft", self.eventManager.selectedEvent.ticketPrice * (int)sender.value];
+    self.priceLabel.text = [NSString stringWithFormat:@"%ld Ft", self.eventManager.selectedEvent.ticketPrice * (int)sender.value];
     BOOL atLeastOneTicketSelected = sender.value > 0;
     if (atLeastOneTicketSelected) self.navigationItem.rightBarButtonItem.enabled = YES;
     else self.navigationItem.rightBarButtonItem.enabled = NO;
@@ -78,9 +92,19 @@
     
     __weak SOEventDetailViewController *weakSelf = self;
     
-    [self.eventManager addEventToCart:eventToAdd times:self.ticketCountStepper.value forUser:[SOSessionManager sharedInstance].activeUser onComplete:^{
+    [self.eventManager addEventToCart:eventToAdd times:self.ticketCountStepper.value forUser:[SOSessionManager sharedInstance].activeUser onComplete:^
+    {
         SOEventDetailViewController *strongSelf = weakSelf;
         eventToAdd.ticketsLeft -= eventToAdd.numberOfTicketsOrdered;
+        
+        dispatch_async(dispatch_get_main_queue(), ^
+        {
+            strongSelf.hud.mode = MBProgressHUDModeCustomView;
+            strongSelf.hud.labelText = @"Sikeres mentés!";
+            [strongSelf.hud show:YES];
+            [strongSelf.hud hide:YES afterDelay:1.0];
+        });
+        
         [strongSelf.navigationController popViewControllerAnimated:YES];
     }];
 }

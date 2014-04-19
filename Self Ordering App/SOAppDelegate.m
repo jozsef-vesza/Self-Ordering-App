@@ -19,30 +19,14 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    [self saveUserData];
+    [[SOSessionManager sharedInstance] saveUserData];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     NSLog(@"Terminating");
-    [self saveUserData];
+    [[SOSessionManager sharedInstance] saveUserData];
     [[SOSessionManager sharedInstance] clearSessionCache];
-}
-
-- (void)saveUserData
-{
-    NSArray *orderedEvents = [SOSessionManager sharedInstance].activeUser.eventOrders;
-    BOOL activeUserHasUnpaidItems = [orderedEvents count] > 0;
-    if (activeUserHasUnpaidItems)
-    {
-        [[SOSessionManager sharedInstance] saveDownloadedItems:orderedEvents to:userEventsKey];
-    }
-//    NSArray *orderedMeals = [SOSessionManager sharedInstance].activeUser.tempMealOrders;
-//    BOOL activeUserHasTempEvents = [orderedMeals count] > 0;
-//    if (activeUserHasTempEvents)
-//    {
-//        [[SOSessionManager sharedInstance] saveDownloadedItems:orderedMeals to:userMealsKey];
-//    }
 }
 
 @end
