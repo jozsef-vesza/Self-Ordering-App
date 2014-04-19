@@ -242,7 +242,9 @@
 - (void)updateOrdersWithArray:(NSArray *)anArray
 {
     [SOSessionManager sharedInstance].activeUser.tempMealOrders = nil;
-    [SOSessionManager sharedInstance].activeUser.mealOrders = [NSArray checkForDuplicatesForType:[SOMeal class] inArray:anArray];
+    NSMutableArray *mealArrays = [[SOSessionManager sharedInstance].activeUser.mealOrders mutableCopy];
+    [mealArrays addObjectsFromArray:anArray];
+    [SOSessionManager sharedInstance].activeUser.mealOrders = [NSArray checkForDuplicatesForType:[SOMeal class] inArray:mealArrays];
 }
 
 @end

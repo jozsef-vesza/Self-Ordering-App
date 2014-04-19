@@ -106,7 +106,7 @@
     self.billView.tipPercentageLabel.text = [NSString stringWithFormat:@"%d %%", (int)self.billView.tipSlider.value];
     self.billView.ordersTableView.dataSource = self.dataSource;
     self.billView.ordersTableView.delegate = self;
-    self.billView.finalSumLabel.text = [NSString stringWithFormat:@"%d Ft", [self calculateTotalCost] + (int)([self calculateTotalCost] * self.billView.tipSlider.value/100)];
+    self.billView.finalSumLabel.text = [NSString stringWithFormat:@"%ld Ft", [self calculateTotalCost] + (int)([self calculateTotalCost] * self.billView.tipSlider.value/100)];
 }
 
 - (NSInteger)calculateTotalCost
@@ -122,7 +122,7 @@
 - (void)sliderValueChanged
 {
     self.billView.tipPercentageLabel.text = [NSString stringWithFormat:@"%d %%", (int)self.billView.tipSlider.value];
-    self.billView.finalSumLabel.text = [NSString stringWithFormat:@"%d Ft", [self calculateTotalCost] + (int)([self calculateTotalCost] * self.billView.tipSlider.value/100)];
+    self.billView.finalSumLabel.text = [NSString stringWithFormat:@"%ld Ft", [self calculateTotalCost] + (int)([self calculateTotalCost] * self.billView.tipSlider.value/100)];
 }
 
 - (void)payButtonPressed
