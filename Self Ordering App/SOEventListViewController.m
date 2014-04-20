@@ -26,6 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.eventManager = [SOEventManager sharedInstance];
     [self setupDataSource];
 }
 
@@ -55,7 +56,7 @@
         self.hud.dimBackground = YES;
         [self.hud show:YES];
     });
-    self.eventManager = [SOEventManager sharedInstance];
+    
     [self.eventManager loadItemsOnComplete:^(NSArray *items)
     {
         self.dataSource = [[JVTableViewDataSource alloc] initWithItems:items];

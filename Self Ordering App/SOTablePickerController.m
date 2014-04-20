@@ -35,12 +35,13 @@
 
 - (void)visualizeLocation
 {
+    self.mapImageView.image = self.location.locationImage;
     NSMutableArray *tables = [NSMutableArray array];
     for (SOTable *table in self.location.tables)
     {
         SOCircleView *circleView = [[SOCircleView alloc] initWithFrame:CGRectMake(table.xPoint, table.yPoint, 50, 50)];
         circleView.layer.cornerRadius = 25;
-        if (table.free) circleView.backgroundColor = [UIColor yellowColor];
+        if (table.free) circleView.backgroundColor = [UIColor greenColor];
         else circleView.backgroundColor = [UIColor grayColor];
         [tables addObject:circleView];
     }
@@ -52,12 +53,8 @@
         [self.mapImageView addSubview:circle];
     }
     
-    UIView *stageView = [[UIView alloc] initWithFrame:CGRectMake(self.location.stageCenterX - self.location.stageWidth/2, self.location.stageCenterY, self.location.stageWidth, self.location.stageHeight)];
-    stageView.backgroundColor = [UIColor brownColor];
-    [self.mapImageView addSubview:stageView];
-    
     self.detailsLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 44, self.view.frame.size.width, 44)];
-    self.detailsLabel.backgroundColor = [UIColor greenColor];
+    
 }
 
 - (void)registerForTouches
@@ -79,6 +76,14 @@
             self.detailsLabel.text = [NSString stringWithFormat:@"Asztal %ld fő részére: %@", (long)tappedTable.numberOfSeats, tappedTable.free ? @"Szabad" : @"Foglalt"];
             self.selectedTable = tappedTable;
             self.detailsLabel.textAlignment = NSTextAlignmentCenter;
+            if (tappedTable.free)
+            {
+                self.detailsLabel.backgroundColor = [UIColor greenColor];
+            }
+            else
+            {
+                self.detailsLabel.backgroundColor = [UIColor grayColor];
+            }
             [self.view addSubview:self.detailsLabel];
             break;
         }

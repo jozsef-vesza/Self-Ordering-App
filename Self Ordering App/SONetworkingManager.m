@@ -81,6 +81,8 @@ typedef enum
         NSMutableArray *tempArray = [NSMutableArray array];
         id eventData = response;
         
+        dispatch_group_t group = dispatch_group_create();
+        
         [NSJSONSerialization parseObjectInArray:eventData executeOnEachItem:^(id item)
         {
             SOEvent *event = [[SOEvent alloc] initWithDictionary:item];
@@ -96,14 +98,34 @@ typedef enum
             anErrorHandler(error);
         }];
         
-        BOOL eventsAreValid = tempArray != nil;
-        if (eventsAreValid) aCompletionHandler(tempArray);
-        else
+        for (SOEvent *event in tempArray)
         {
-            NSError *error = [NSError errorWithDomain:@"Nem sikerült az elemek letöltése" code:0 userInfo:nil];
-            anErrorHandler(error);
+            dispatch_group_enter(group);
+            [self imageRequestForUrlPath:@"eventimageservice" withParameters:@{@"identifier" : event.identifier} onComplete:^(UIImage *response)
+            {
+                event.location.locationImage = response;
+                dispatch_group_leave(group);
+            }
+            onError:^(NSError *error)
+            {
+                dispatch_group_leave(group);
+            }];
         }
-
+        
+        dispatch_group_notify(group, dispatch_get_main_queue(), ^
+        {
+            BOOL eventsAreValid = tempArray != nil;
+            if (eventsAreValid)
+            {
+                aCompletionHandler(tempArray);
+            }
+            else
+            {
+                NSError *error = [NSError errorWithDomain:@"Nem sikerült az elemek letöltése" code:0 userInfo:nil];
+                anErrorHandler(error);
+            }
+        });
+        
     }
     onError:^(NSError *error)
     {
@@ -186,7 +208,7 @@ typedef enum
             if (item[@"image"])
             {
                 dispatch_group_enter(group);
-                [self imageRequestForUrlPath:item[@"image"] withParameters:nil onComplete:^(UIImage *response)
+                [self imageRequestForUrlPath:@"mealimageservice" withParameters:@{@"identifier" : meal.identifier} onComplete:^(UIImage *response)
                 {
                     meal.mealImage = response;
                     dispatch_group_leave(group);
@@ -388,7 +410,9 @@ typedef enum
     AFImageResponseSerializer *responseSerializer = [AFImageResponseSerializer serializer];
     requestManager.responseSerializer = responseSerializer;
     
-    [requestManager GET:anUrlPath parameters:aParameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    NSString *urlString = [NSString stringWithFormat:@"%@/%@", [self serverUrl], anUrlPath];
+    
+    [requestManager GET:urlString parameters:aParameters success:^(AFHTTPRequestOperation *operation, id responseObject)
     {
         aCompletionHandler(responseObject);
     }

@@ -17,6 +17,7 @@
 @property (nonatomic) double stageWidth;
 @property (nonatomic) double stageHeight;
 @property (nonatomic,copy) NSArray *tables;
+@property (strong, nonatomic) UIImage *locationImage;
 
 - (instancetype)initWithDictionary:(NSDictionary *)aDictionary;
 
