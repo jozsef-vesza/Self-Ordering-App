@@ -201,21 +201,21 @@
                                     <outlet property="mealPriceLabel" destination="rLB-u9-tp3" id="PTk-Fw-PzW"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="expandedMealCell" rowHeight="400" id="wzj-r9-i84" customClass="SOExpandedMealCell">
-                                <rect key="frame" x="0.0" y="130" width="320" height="400"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="expandedMealCell" rowHeight="370" id="wzj-r9-i84" customClass="SOExpandedMealCell">
+                                <rect key="frame" x="0.0" y="130" width="320" height="370"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wzj-r9-i84" id="WmD-Qg-32s">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="399"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="369"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="gFv-98-goq">
-                                            <rect key="frame" x="206" y="350" width="94" height="29"/>
+                                        <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="gFv-98-goq">
+                                            <rect key="frame" x="206" y="520" width="94" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <connections>
                                                 <action selector="stepperValueChanged:" destination="wzj-r9-i84" eventType="valueChanged" id="jZW-M5-WXb"/>
                                             </connections>
                                         </stepper>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IT3-Eg-3BP">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IT3-Eg-3BP">
                                             <rect key="frame" x="20" y="210" width="280" height="130"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -223,7 +223,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWb-yO-RCv" customClass="SORateView">
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AWb-yO-RCv" customClass="SORateView">
                                             <rect key="frame" x="20" y="350" width="146" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -259,6 +259,40 @@
                                     <outlet property="mealImageView" destination="cuw-lz-Cbz" id="GgX-YI-F0I"/>
                                     <outlet property="mealRateView" destination="AWb-yO-RCv" id="mSp-fz-MON"/>
                                     <segue destination="AoP-Sr-klG" kind="modal" identifier="mealImageSegue" id="h1c-1o-HXD"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="drinkCell" id="VpJ-ah-Rzp" customClass="SODrinkTVCell">
+                                <rect key="frame" x="0.0" y="500" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VpJ-ah-Rzp" id="o7p-IH-1fW">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="FC5-DO-Xeb">
+                                            <rect key="frame" x="206" y="7" width="94" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <connections>
+                                                <action selector="valueChanged:" destination="VpJ-ah-Rzp" eventType="valueChanged" id="OMW-vC-JrH"/>
+                                            </connections>
+                                        </stepper>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYf-gc-WDW" customClass="SORateView">
+                                            <rect key="frame" x="20" y="7" width="146" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="aYf-gc-WDW" firstAttribute="leading" secondItem="o7p-IH-1fW" secondAttribute="leading" constant="20" id="4am-63-BNz"/>
+                                        <constraint firstAttribute="centerY" secondItem="aYf-gc-WDW" secondAttribute="centerY" id="ImQ-iH-oc0"/>
+                                        <constraint firstItem="FC5-DO-Xeb" firstAttribute="leading" secondItem="aYf-gc-WDW" secondAttribute="trailing" constant="40" id="Le5-ZD-FPU"/>
+                                        <constraint firstItem="aYf-gc-WDW" firstAttribute="height" secondItem="FC5-DO-Xeb" secondAttribute="height" id="Qg3-EY-2FD"/>
+                                        <constraint firstAttribute="centerY" secondItem="FC5-DO-Xeb" secondAttribute="centerY" id="UMf-Ut-Zwp"/>
+                                        <constraint firstAttribute="trailing" secondItem="FC5-DO-Xeb" secondAttribute="trailing" constant="20" id="kW8-oM-pPv"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="mealAmountStepper" destination="FC5-DO-Xeb" id="jig-k2-xbs"/>
+                                    <outlet property="rateView" destination="aYf-gc-WDW" id="xqL-sO-VR2"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

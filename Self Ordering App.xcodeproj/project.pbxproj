@@ -79,6 +79,8 @@
 		8EA74BC718E87192008CE804 /* SORatingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA74BC618E87192008CE804 /* SORatingCell.m */; };
 		8EA74BCA18E8724C008CE804 /* SOMealRatingCellConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA74BC918E8724C008CE804 /* SOMealRatingCellConfigurator.m */; };
 		8EA7F3E818DE91240008B36D /* SOPurchaseDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA7F3E718DE91240008B36D /* SOPurchaseDetailsViewController.m */; };
+		8EBED328190360BA00F6479D /* SODrinkTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBED327190360BA00F6479D /* SODrinkTVCell.m */; };
+		8EBED32B1903614600F6479D /* SODrinkTVCell+StepperNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBED32A1903614600F6479D /* SODrinkTVCell+StepperNotifications.m */; };
 		8ED6494018C9361D00837D34 /* SOEventTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED6493F18C9361D00837D34 /* SOEventTabBarController.m */; };
 		8EDE212A18F1FA6A00028B04 /* SOLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDE212918F1FA6A00028B04 /* SOLocation.m */; };
 		8EDE212D18F1FA8100028B04 /* SOTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDE212C18F1FA8100028B04 /* SOTable.m */; };
@@ -222,6 +224,10 @@
 		8EA74BC918E8724C008CE804 /* SOMealRatingCellConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOMealRatingCellConfigurator.m; sourceTree = "<group>"; };
 		8EA7F3E618DE91240008B36D /* SOPurchaseDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOPurchaseDetailsViewController.h; sourceTree = "<group>"; };
 		8EA7F3E718DE91240008B36D /* SOPurchaseDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOPurchaseDetailsViewController.m; sourceTree = "<group>"; };
+		8EBED326190360BA00F6479D /* SODrinkTVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SODrinkTVCell.h; sourceTree = "<group>"; };
+		8EBED327190360BA00F6479D /* SODrinkTVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SODrinkTVCell.m; sourceTree = "<group>"; };
+		8EBED3291903614600F6479D /* SODrinkTVCell+StepperNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SODrinkTVCell+StepperNotifications.h"; sourceTree = "<group>"; };
+		8EBED32A1903614600F6479D /* SODrinkTVCell+StepperNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SODrinkTVCell+StepperNotifications.m"; sourceTree = "<group>"; };
 		8ED6493E18C9361D00837D34 /* SOEventTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOEventTabBarController.h; sourceTree = "<group>"; };
 		8ED6493F18C9361D00837D34 /* SOEventTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOEventTabBarController.m; sourceTree = "<group>"; };
 		8EDE212818F1FA6A00028B04 /* SOLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOLocation.h; sourceTree = "<group>"; };
@@ -292,6 +298,8 @@
 				8EA74BBA18E7C31B008CE804 /* SORestaurantBillView+SliderNotifications.m */,
 				8EA74BC818E8724C008CE804 /* SOMealRatingCellConfigurator.h */,
 				8EA74BC918E8724C008CE804 /* SOMealRatingCellConfigurator.m */,
+				8EBED3291903614600F6479D /* SODrinkTVCell+StepperNotifications.h */,
+				8EBED32A1903614600F6479D /* SODrinkTVCell+StepperNotifications.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -464,6 +472,8 @@
 				8EA74BC618E87192008CE804 /* SORatingCell.m */,
 				8EDE213118F29B7A00028B04 /* SOCircleView.h */,
 				8EDE213218F29B7A00028B04 /* SOCircleView.m */,
+				8EBED326190360BA00F6479D /* SODrinkTVCell.h */,
+				8EBED327190360BA00F6479D /* SODrinkTVCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -674,8 +684,10 @@
 				8E355B3A18C1DE85004F5198 /* SOEventManager.m in Sources */,
 				8EA74BC718E87192008CE804 /* SORatingCell.m in Sources */,
 				8EA74BCA18E8724C008CE804 /* SOMealRatingCellConfigurator.m in Sources */,
+				8EBED328190360BA00F6479D /* SODrinkTVCell.m in Sources */,
 				8E355B3018C1D5E6004F5198 /* SOUser.m in Sources */,
 				8E0C89FF18DF9B250003CC02 /* SORateView.m in Sources */,
+				8EBED32B1903614600F6479D /* SODrinkTVCell+StepperNotifications.m in Sources */,
 				8E355B5518C3374A004F5198 /* SOMultiEventTableViewCell.m in Sources */,
 				8E366D1518BE4F0B00856B51 /* main.m in Sources */,
 				8E3C5DCD18E239A60012BD88 /* SOTempOrderCell+StepperNotifications.m in Sources */,

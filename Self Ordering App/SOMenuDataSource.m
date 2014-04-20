@@ -214,7 +214,15 @@
                 break;
         }
         
-        cellAtIndexPath = [tableView dequeueReusableCellWithIdentifier:@"expandedMealCell"];
+        SOMeal *mealAtIndex = (SOMeal *)itemAtIndexPath;
+        if (!mealAtIndex.mealImage)
+        {
+            cellAtIndexPath = [tableView dequeueReusableCellWithIdentifier:@"drinkCell"];
+        }
+        else
+        {
+            cellAtIndexPath = [tableView dequeueReusableCellWithIdentifier:@"expandedMealCell"];
+        }
     }
     else
     {
@@ -290,6 +298,34 @@
     }
     
     return anIndexPath;
+}
+
+- (id)mealAtTappedIndex:(NSIndexPath *)anIndexPath
+{
+    id itemAtIndexPath = nil;
+    switch (anIndexPath.section)
+    {
+        case 1:
+            itemAtIndexPath = self.mealManager.soupsArray[[self actualIndexPathForTappedIndexPath:anIndexPath].row - 1];
+            break;
+        case 2:
+            itemAtIndexPath = self.mealManager.mainDishesArray[[self actualIndexPathForTappedIndexPath:anIndexPath].row - 1];
+            break;
+        case 3:
+            itemAtIndexPath = self.mealManager.dessertsArray[[self actualIndexPathForTappedIndexPath:anIndexPath].row - 1];
+            break;
+        case 4:
+            itemAtIndexPath = self.mealManager.drinksArray[[self actualIndexPathForTappedIndexPath:anIndexPath].row - 1];
+            break;
+        case 5:
+            itemAtIndexPath = self.mealManager.alcoholicDrinksArray[[self actualIndexPathForTappedIndexPath:anIndexPath].row - 1];
+            break;
+        default:
+            itemAtIndexPath = self.mealManager.startersArray[[self actualIndexPathForTappedIndexPath:anIndexPath].row - 1];
+            break;
+    }
+    
+    return itemAtIndexPath;
 }
 
 @end

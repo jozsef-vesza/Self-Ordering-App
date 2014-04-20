@@ -185,7 +185,12 @@
     SOMenuDataSource *dataSource = self.tableView.dataSource;
     if (dataSource.expandedIndexPath && [dataSource.expandedIndexPath isEqual:indexPath])
     {
-        return 400;
+        SOMeal *meal = [dataSource mealAtTappedIndex:indexPath];
+        if (meal.mealImage)
+        {
+            return 370;
+        }
+        
     }
     
     return 44;

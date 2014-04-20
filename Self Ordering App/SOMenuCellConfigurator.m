@@ -9,6 +9,7 @@
 #import "SOMenuCellConfigurator.h"
 #import "SOSimpleMealCell.h"
 #import "SOExpandedMealCell.h"
+#import "SODrinkTVCell.h"
 #import "SOMeal.h"
 #import "SOMealManager.h"
 
@@ -32,6 +33,19 @@
         simpleCell.mealAmountField.text = [NSString stringWithFormat:@"%ld", (long)mealInCell.numberOfMealsOrdered];
         simpleCell.mealAmountField.userInteractionEnabled = NO;
         return simpleCell;
+    }
+    
+    if ([aCell.reuseIdentifier isEqualToString:@"drinkCell"])
+    {
+        SODrinkTVCell *drinkCell = (SODrinkTVCell *)aCell;
+        drinkCell.rateView.notSelectedImage = [UIImage imageNamed:@"1386029323_star-0.png"];
+        drinkCell.rateView.fullSelectedImage = [UIImage imageNamed:@"1386029310_star-4.png"];
+        drinkCell.rateView.rating = mealInCell.mealRating;
+        drinkCell.rateView.editable = NO;
+        drinkCell.rateView.maxRating = 5;
+        drinkCell.expandedPath = anIndexPath;
+        
+        return drinkCell;
     }
     
     SOExpandedMealCell *expandedCell = (SOExpandedMealCell *)aCell;
