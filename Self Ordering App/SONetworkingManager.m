@@ -101,9 +101,23 @@ typedef enum
         for (SOEvent *event in tempArray)
         {
             dispatch_group_enter(group);
-            [self imageRequestForUrlPath:@"eventimageservice" withParameters:@{@"identifier" : event.identifier} onComplete:^(UIImage *response)
+            [self imageRequestForUrlPath:@"locationimageservice" withParameters:@{@"identifier" : event.identifier} onComplete:^(UIImage *response)
             {
                 event.location.locationImage = response;
+                dispatch_group_leave(group);
+            }
+            onError:^(NSError *error)
+            {
+                dispatch_group_leave(group);
+            }];
+        }
+        
+        for (SOEvent *event in tempArray)
+        {
+            dispatch_group_enter(group);
+            [self imageRequestForUrlPath:@"eventimageservice" withParameters:@{@"identifier" : event.identifier} onComplete:^(UIImage *response)
+            {
+                event.eventImage = response;
                 dispatch_group_leave(group);
             }
             onError:^(NSError *error)

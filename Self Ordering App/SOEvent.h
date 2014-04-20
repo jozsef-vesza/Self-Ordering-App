@@ -63,6 +63,8 @@
  */
 @property (strong,nonatomic) SOLocation *location;
 
+@property (strong, nonatomic) UIImage *eventImage;
+
 /**
  *  Number of tickets ordered by user
  */

@@ -38,6 +38,7 @@
         {
             // Configure promoted event
             SOPromotedEventTableViewCell *promotedCell = (SOPromotedEventTableViewCell *)aCell;
+            [promotedCell.promotedEventButton setBackgroundImage:eventInCell.eventImage forState:UIControlStateNormal];
             return promotedCell;
         }
     }
@@ -45,6 +46,10 @@
     {
         // Configure multicell event
         SOMultiEventTableViewCell *multiCell = (SOMultiEventTableViewCell *)aCell;
+        SOEvent *leftEvent = (SOEvent *)anObject[0];
+        SOEvent *rightEvent = (SOEvent *)anObject[1];
+        [multiCell.leftEventButton setBackgroundImage:leftEvent.eventImage forState:UIControlStateNormal];
+        [multiCell.rightEventButton setBackgroundImage:rightEvent.eventImage forState:UIControlStateNormal];
         return multiCell;
     }
     
