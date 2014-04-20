@@ -32,7 +32,6 @@
     [super viewDidLoad];
     self.mealManager = [SOMealManager sharedInstance];
     [self setupDataSource];
-    [[NSNotificationCenter defaultCenter] postNotificationName:saveMenuNotification object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated

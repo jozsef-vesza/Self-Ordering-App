@@ -36,7 +36,6 @@
     if (self)
     {
         _networkingManager = [SONetworkingManager sharedInstance];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveMenu) name:saveMenuNotification object:nil];
     }
     return self;
 }
@@ -91,12 +90,15 @@
     {
         [self.networkingManager downloadMealsOnComplete:^(NSArray *menu)
         {
+            
             self.startersArray = [self sortArray:menu forMealCategory:@"starter"];
             self.soupsArray = [self sortArray:menu forMealCategory:@"soup"];
             self.mainDishesArray = [self sortArray:menu forMealCategory:@"main"];
             self.dessertsArray = [self sortArray:menu forMealCategory:@"dessert"];
             self.drinksArray = [self sortArray:menu forMealCategory:@"drink"];
             self.alcoholicDrinksArray = [self sortArray:menu forMealCategory:@"alcoholic"];
+            
+            [self saveMenu];
             
             aCompletionHandler();
         }

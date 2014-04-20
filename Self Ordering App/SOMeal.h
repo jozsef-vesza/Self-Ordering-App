@@ -55,6 +55,8 @@
 
 @property (nonatomic,strong) UIImage *mealImage;
 
+@property (copy, nonatomic) NSString *imageUrl;
+
 /**
  *  Custom initializer method using a dictionary
  *

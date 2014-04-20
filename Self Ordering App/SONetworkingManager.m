@@ -178,18 +178,23 @@ typedef enum
         NSMutableArray *tempArray = [NSMutableArray array];
         id mealData = response;
         
+        dispatch_group_t group = dispatch_group_create();
+        
         [NSJSONSerialization parseObjectInArray:mealData executeOnEachItem:^(id item)
         {
             SOMeal *meal = [[SOMeal alloc] initWithDictionary:item];
             if (item[@"image"])
             {
+                dispatch_group_enter(group);
                 [self imageRequestForUrlPath:item[@"image"] withParameters:nil onComplete:^(UIImage *response)
                 {
                     meal.mealImage = response;
+                    dispatch_group_leave(group);
                 }
                 onError:^(NSError *error)
                 {
                     NSLog(@"Error while downloading images: %@", error);
+                    dispatch_group_leave(group);
                 }];
             }
             if (meal)
@@ -202,13 +207,16 @@ typedef enum
             anErrorHandler(error);
         }];
         
-        BOOL mealsAreValid = tempArray != nil;
-        if (mealsAreValid) aCompletionHandler(tempArray);
-        else
+        dispatch_group_notify(group, dispatch_get_main_queue(), ^
         {
-            NSError *error = [NSError errorWithDomain:@"Nem sikerült az elemek letöltése" code:0 userInfo:nil];
-            anErrorHandler(error);
-        }
+            BOOL mealsAreValid = tempArray != nil;
+            if (mealsAreValid) aCompletionHandler(tempArray);
+            else
+            {
+                NSError *error = [NSError errorWithDomain:@"Nem sikerült az elemek letöltése" code:0 userInfo:nil];
+                anErrorHandler(error);
+            }
+        });
     }
     onError:^(NSError *error)
     {

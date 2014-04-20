@@ -24,6 +24,7 @@
         NSNumber *idNum = aDictionary[@"identifier"];
         _identifier = idNum ? idNum : nil;
         _numberOfMealsOrdered = [aDictionary[@"amount"] integerValue];
+        _imageUrl = aDictionary[@"image"];
     }
     
     return self;
