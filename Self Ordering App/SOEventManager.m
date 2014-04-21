@@ -71,8 +71,10 @@
             anErrorHandler(error);
         }];
     }
-    
-    aCompletionHandler(self.eventsArray);
+    else
+    {
+        aCompletionHandler(self.eventsArray);
+    }
 }
 
 - (void)clearItemsOnComplete:(void (^)())aCompletionHandler
@@ -203,7 +205,11 @@
         [self.networkManager downloadQRCodeForEvent:self.selectedEvent andUser:[SOSessionManager sharedInstance].activeUser onComplete:^(UIImage *image)
         {
             aCompletionHandler(image);
-            [[SOSessionManager sharedInstance] saveDownloadedItems:@[image] to:path];
+            if (image)
+            {
+                [[SOSessionManager sharedInstance] saveDownloadedItems:@[image] to:path];
+            }
+            
         }
         onError:^(NSError *error)
         {

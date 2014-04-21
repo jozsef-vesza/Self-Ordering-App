@@ -75,6 +75,7 @@
         self.identifier = [aDecoder decodeObjectForKey:@"identifier"];
         self.isPaid = [aDecoder decodeBoolForKey:@"isPaid"];
         self.selectedTable = [aDecoder decodeObjectForKey:@"selectedTable"];
+        self.eventImage = [aDecoder decodeObjectForKey:@"eventImage"];
     }
     
     return self;
@@ -93,6 +94,7 @@
     [aCoder encodeObject:self.identifier forKey:@"identifier"];
     [aCoder encodeBool:self.isPaid forKey:@"isPaid"];
     [aCoder encodeObject:self.selectedTable forKey:@"selectedTable"];
+    [aCoder encodeObject:self.eventImage forKey:@"eventImage"];
 }
 
 - (NSDate *)parseDate:(NSString *)aString

@@ -70,6 +70,7 @@
     }
     onError:^(NSError *error)
     {
+        NSLog(@"ERROR: %@", error);
         dispatch_async(dispatch_get_main_queue(), ^
         {
             self.hud.mode = MBProgressHUDModeCustomView;

@@ -41,6 +41,7 @@
         _stageHeight = [aDecoder decodeDoubleForKey:@"stageHeight"];
         _stageWidth = [aDecoder decodeDoubleForKey:@"stageWidth"];
         _tables = [aDecoder decodeObjectForKey:@"tables"];
+        _locationImage = [aDecoder decodeObjectForKey:@"locationImage"];
     }
     
     return self;
@@ -55,6 +56,7 @@
     [aCoder encodeDouble:self.stageWidth forKey:@"stageWidth"];
     [aCoder encodeObject:self.tables forKey:@"tables"];
     [aCoder encodeObject:self.identifier forKey:@"identifier"];
+    [aCoder encodeObject:self.locationImage forKey:@"locationImage"];
 }
 
 - (NSArray *)parseTablesFromResponse:(id)aResponse

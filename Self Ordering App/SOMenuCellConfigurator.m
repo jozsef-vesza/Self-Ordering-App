@@ -43,6 +43,13 @@
         drinkCell.rateView.rating = mealInCell.mealRating;
         drinkCell.rateView.editable = NO;
         drinkCell.rateView.maxRating = 5;
+        drinkCell.mealAmountStepper.value = mealInCell.numberOfMealsOrdered;
+        drinkCell.mealAmountStepper.minimumValue = 0;
+        drinkCell.mealAmountStepper.maximumValue = 99;
+        drinkCell.mealAmountStepper.wraps = NO;
+        drinkCell.mealAmountStepper.autorepeat = YES;
+        drinkCell.mealAmountStepper.continuous = YES;
+        
         drinkCell.expandedPath = anIndexPath;
         
         return drinkCell;

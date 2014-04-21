@@ -101,28 +101,27 @@ typedef enum
         for (SOEvent *event in tempArray)
         {
             dispatch_group_enter(group);
-            [self imageRequestForUrlPath:@"locationimageservice" withParameters:@{@"identifier" : event.identifier} onComplete:^(UIImage *response)
-            {
-                event.location.locationImage = response;
-                dispatch_group_leave(group);
-            }
-            onError:^(NSError *error)
-            {
-                dispatch_group_leave(group);
-            }];
-        }
-        
-        for (SOEvent *event in tempArray)
-        {
-            dispatch_group_enter(group);
-            [self imageRequestForUrlPath:@"eventimageservice" withParameters:@{@"identifier" : event.identifier} onComplete:^(UIImage *response)
+            [self imageRequestForUrlPath:[NSString stringWithFormat:@"%@/%@", [self serverUrl], @"eventimageservice"] withParameters:@{@"identifier" : event.identifier} onComplete:^(UIImage *response)
             {
                 event.eventImage = response;
                 dispatch_group_leave(group);
             }
             onError:^(NSError *error)
             {
+                NSLog(@"Error: %@", error);
                 dispatch_group_leave(group);
+            }];
+        }
+        
+        for (SOEvent *event in tempArray)
+        {
+            [self imageRequestForUrlPath:[NSString stringWithFormat:@"%@/%@", [self serverUrl], @"locationimageservice"] withParameters:@{@"identifier" : event.identifier} onComplete:^(UIImage *response)
+            {
+                event.location.locationImage = response;
+            }
+            onError:^(NSError *error)
+            {
+                NSLog(@"Error: %@", error);
             }];
         }
         
@@ -222,7 +221,7 @@ typedef enum
             if (item[@"image"])
             {
                 dispatch_group_enter(group);
-                [self imageRequestForUrlPath:@"mealimageservice" withParameters:@{@"identifier" : meal.identifier} onComplete:^(UIImage *response)
+                [self imageRequestForUrlPath:[NSString stringWithFormat:@"%@/%@", [self serverUrl], @"mealimageservice"] withParameters:@{@"identifier" : meal.identifier} onComplete:^(UIImage *response)
                 {
                     meal.mealImage = response;
                     dispatch_group_leave(group);
@@ -422,11 +421,10 @@ typedef enum
 {
     AFHTTPRequestOperationManager *requestManager = [[AFHTTPRequestOperationManager alloc] init];
     AFImageResponseSerializer *responseSerializer = [AFImageResponseSerializer serializer];
+    responseSerializer.acceptableContentTypes =  [responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     requestManager.responseSerializer = responseSerializer;
     
-    NSString *urlString = [NSString stringWithFormat:@"%@/%@", [self serverUrl], anUrlPath];
-    
-    [requestManager GET:urlString parameters:aParameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [requestManager GET:anUrlPath parameters:aParameters success:^(AFHTTPRequestOperation *operation, id responseObject)
     {
         aCompletionHandler(responseObject);
     }

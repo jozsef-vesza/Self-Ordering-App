@@ -71,7 +71,7 @@
     }
 }
 
--(void)setupDataSource
+- (void)setupDataSource
 {
     dispatch_async(dispatch_get_main_queue(), ^
     {
@@ -80,6 +80,7 @@
         self.hud.dimBackground = YES;
         [self.hud show:YES];
     });
+    
     [self.mealManager loadItemsOnComplete:^
     {
         self.dataSource = [[SOMenuDataSource alloc] init];
