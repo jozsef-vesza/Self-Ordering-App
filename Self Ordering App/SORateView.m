@@ -171,7 +171,6 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    //TODO: refactor trateview to use notifications
     [[NSNotificationCenter defaultCenter] postNotificationName:ratingChangedNotification object:self];
     [self.delegate rateView:self ratingDidChange:self.rating];
 }

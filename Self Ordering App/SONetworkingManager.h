@@ -87,10 +87,34 @@
  */
 - (void)downloadMealsOnComplete:(void (^)(NSArray *menu))aCompletionHandler onError:(void (^)(NSError *error))anErrorHandler;
 
+/**
+ *  Send a meal order
+ *
+ *  @param aMeals             The meals to be ordered
+ *  @param anUser             The active user
+ *  @param aCompletionHandler Block to be executed upon completion
+ *  @param anErrorHandler     Block to be executed in case of error
+ */
 - (void)orderMeals:(NSArray *)aMeals forUser:(SOUser *)anUser onComplete:(void (^)(NSArray *order))aCompletionHandler onError:(void (^)(NSError *error))anErrorHandler;
 
+/**
+ *  Pay for ordered meals
+ *
+ *  @param aMeals             The ordered meals
+ *  @param aTip               An optional tip
+ *  @param anUser             The active user
+ *  @param aCompletionHandler Block to be executed upon completion
+ *  @param anErrorHandler     Block to be executed in case of error
+ */
 - (void)payForMeals:(NSArray *)aMeals withTip:(NSInteger)aTip forUser:(SOUser *)anUser onComplete:(void (^)())aCompletionHandler onError:(void (^)(NSError *error))anErrorHandler;
 
+/**
+ *  Send rating for ordered meals
+ *
+ *  @param aMeals             The meals to be rated
+ *  @param aCompletionHandler Block to excute upon completion
+ *  @param anErrorHandler     Block to execute in case of error
+ */
 - (void)sendRatingForMeals:(NSArray *)aMeals onComplete:(void (^)())aCompletionHandler onError:(void (^)(NSError *error))anErrorHandler;
 
 @end

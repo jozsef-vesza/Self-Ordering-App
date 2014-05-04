@@ -85,7 +85,6 @@
 
 #pragma mark - Data management
 
-//TODO: check cache!
 - (void)saveDownloadedItems:(NSArray *)items to:(NSString *)path
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);

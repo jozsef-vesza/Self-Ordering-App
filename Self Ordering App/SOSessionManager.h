@@ -80,10 +80,23 @@
  */
 - (void)clearSessionCache;
 
+/**
+ *  Cache user items
+ */
 - (void)saveUserData;
 
+/**
+ *  Load the stored credentials from NSUserDefaults
+ *
+ *  @return A dictionary containing user data
+ */
 - (NSDictionary *)loadStoredCredentials;
 
+/**
+ *  Handle credential storage for the user
+ *
+ *  @param aState The value of the UISwitch on the login screen
+ */
 - (void)manageCredentialStorageForState:(BOOL)aState;
 
 @end

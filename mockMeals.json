@@ -1,36 +1,30 @@
  [
   {
-  "name": "Bajor szűzpecsenye",
-  "description": "A szűzpecsenyét kiklopfoljuk, fűszerezzük és megkenjük a hagymás, mustáros töltelékkel. Olajban pácoljuk majd rostlapon sütjük.",
-  "price": 1390,
-  "rating": 3,
-  "totalRatings": 9,
-  "category": "main",
-  "isPaid": false,
-  "amount": 0,
-  "identifier": 4573968371548160
-  },
-  {
-  "name": "Lipton ice tea barackos - 1,5L",
-  "description": "",
-  "price": 450,
-  "rating": 4,
-  "totalRatings": 12,
-  "category": "drink",
-  "isPaid": false,
-  "amount": 0,
-  "identifier": 4714705859903488
-  },
-  {
-  "name": "Jack Daniel's - 1 L ",
-  "description": "",
-  "price": 9150,
-  "rating": 4,
+  "name": "Cézár saláta",
+  "description": "A darabolt jégsalátát megízesítjük egy szardellás majonéz öntettel, a tetejére parmezánforgácsokat reszelünk. Fokhagymás zsemlekockával tálaljuk.",
+  "price": 1090,
+  "rating": 1,
   "totalRatings": 5,
-  "category": "alcoholic",
-  "isPaid": false,
-  "amount": 0,
-  "identifier": 4855443348258816
+  "category": "starter",
+  "image" : "cezarsalata.jpg"
+  },
+  {
+  "name": "Görög saláta",
+  "description": "Kockára vágott uborkát, paprikát, lilahagymát, paradicsomot és olívabogyót beízesítjük enyhén ecetesre és édesre. A tetejére kockára vágott feta sajtot teszünk.",
+  "price": 1290,
+  "rating": 4,
+  "totalRatings": 10,
+  "category": "starter",
+  "image" : "gorogsalata.jpg"
+  },
+  {
+  "name": "Grillezett kecskesajt",
+  "description": "A lollo biancot, piros tölgyfa- és radiccio salátát, julienne (vékonyra vágott) répát, paradicsomot összekeverjük citromos olivás öntettel, majd a grillezett kecskesajt mellé rakjuk",
+  "price": 1690,
+  "rating": 4,
+  "totalRatings": 4,
+  "category": "starter",
+  "image" : "grillezettkecskesajt.jpg"
   },
   {
   "name": "Hideg gyümölcsleves",
@@ -39,119 +33,7 @@
   "rating": 5,
   "totalRatings": 100,
   "category": "soup",
-  "isPaid": false,
-  "amount": 0,
-  "identifier": 4925812092436480
-  },
-  {
-  "name": "Finlandia - 1 L",
-  "description": "",
-  "price": 3250,
-  "rating": 5,
-  "totalRatings": 5,
-  "category": "alcoholic",
-  "isPaid": false,
-  "amount": 0,
-  "identifier": 4996180836614144
-  },
-  {
-  "name": "Gesztenyepüré",
-  "description": "A gesztenyepürét ízesítjük, majd lereszeljük, és tejszínhabbal díszítjük.",
-  "price": 390,
-  "rating": 3,
-  "totalRatings": 32,
-  "category": "dessert",
-  "isPaid": false,
-  "amount": 0,
-  "identifier": 5136918324969472
-  },
-  {
-  "name": "Farfalle saláta",
-  "description": "A kifőzött nyakkendő tésztát összekeverjük baby parajjal, céklalevéllel és pestoval, majd megszórjuk pármai sonkával, paradicsomcikkel és felezett mini mozzarellával.",
-  "price": 1490,
-  "rating": 4,
-  "totalRatings": 10,
-  "category": "starter",
-  "isPaid": false,
-  "amount": 0,
-  "identifier": 5207287069147136
-  },
-  {
-  "name": "Schweppes narancs - 1 L",
-  "description": "",
-  "price": 360,
-  "rating": 3,
-  "totalRatings": 5,
-  "category": "drink",
-  "isPaid": false,
-  "amount": 0,
-  "identifier": 5277655813324800
-  },
-  {
-  "name": "Somlói galuska",
-  "description": "Csokoládés vaniliás piskóta vanilia krémmel rétegezve, diókrémmel izesítve csoki öntettel locsolva tejszinhabbal tálalva.",
-  "price": 550,
-  "rating": 5,
-  "totalRatings": 4,
-  "category": "dessert",
-  "isPaid": false,
-  "amount": 0,
-  "identifier": 5418393301680128
-  },
-  {
-  "name": "Angolmustáros tarjaszelet",
-  "description": "A kiklopfolt tarjaszeleteket fűszerezzük, majd vékonyan bekenjük mustárral. Napraforgó olajban pácoljuk, majd rostlapon sütjük",
-  "price": 990,
-  "rating": 4,
-  "totalRatings": 10,
-  "category": "main",
-  "isPaid": false,
-  "amount": 0,
-  "identifier": 5488762045857792
-  },
-  {
-  "name": "Édes chilis csirkeszárny",
-  "description": "Rostlapon pirosra sütjük az előfőzött kentucky csirkeszárnyat, majd édes chili szószt öntünk rá.",
-  "price": 850,
-  "rating": 4,
-  "totalRatings": 567,
-  "category": "main",
-  "isPaid": false,
-  "amount": 0,
-  "identifier": 5699868278390784
-  },
-  {
-  "name": "Cézár saláta",
-  "description": "A darabolt jégsalátát megízesítjük egy szardellás majonéz öntettel, a tetejére parmezánforgácsokat reszelünk. Fokhagymás zsemlekockával tálaljuk.",
-  "price": 1090,
-  "rating": 1,
-  "totalRatings": 5,
-  "category": "starter",
-  "isPaid": false,
-  "amount": 0,
-  "identifier": 5770237022568448
-  },
-  {
-  "name": "Kristályviz - szénsavas - 1,5 L ",
-  "description": "",
-  "price": 220,
-  "rating": 4,
-  "totalRatings": 10,
-  "category": "drink",
-  "isPaid": false,
-  "amount": 0,
-  "identifier": 5840605766746112
-  },
-  {
-  "name": "Sárgabarack lekváros palacsinta ",
-  "description": "A legkedveltebb magyar hagyományos desszert, amibe házilag főzött sárgabarack lekvárt teszünk",
-  "price": 350,
-  "rating": 4,
-  "totalRatings": 15,
-  "category": "dessert",
-  "isPaid": false,
-  "amount": 0,
-  "identifier": 5981343255101440
+  "image" : "hideggyumolcsleves.jpg"
   },
   {
   "name": "Húsleves gazdagon",
@@ -160,64 +42,16 @@
   "rating": 3,
   "totalRatings": 30,
   "category": "soup",
-  "isPaid": false,
-  "amount": 0,
-  "identifier": 6051711999279104
+  "image" : "husleves.jpg"
   },
   {
-  "name": "Gordon's Gin - 0.7 L",
-  "description": "",
-  "price": 5590,
-  "rating": 5,
-  "totalRatings": 5,
-  "category": "alcoholic",
-  "isPaid": false,
-  "amount": 0,
-  "identifier": 6122080743456768
-  },
-  {
-  "name": "Kakaós palacsinta",
-  "description": "A megsült palacsintát megtöltjük a gyerekek kedvenc kakaójával, majd meglocsoljuk csokiöntettel.",
-  "price": 390,
-  "rating": 5,
-  "totalRatings": 43,
-  "category": "dessert",
-  "isPaid": false,
-  "amount": 0,
-  "identifier": 6262818231812096
-  },
-  {
-  "name": "Grillezett kecskesajt",
-  "description": "A lollo biancot, piros tölgyfa- és radiccio salátát, julienne (vékonyra vágott) répát, paradicsomot összekeverjük citromos olivás öntettel, majd a grillezett kecskesajt mellé rakjuk",
-  "price": 1590,
+  "name": "Angolmustáros tarjaszelet",
+  "description": "A kiklopfolt tarjaszeleteket fűszerezzük, majd vékonyan bekenjük mustárral. Napraforgó olajban pácoljuk, majd rostlapon sütjük",
+  "price": 990,
   "rating": 4,
-  "totalRatings": 4,
-  "category": "starter",
-  "isPaid": false,
-  "amount": 0,
-  "identifier": 6333186975989760
-  },
-  {
-  "name": "Szalon sör - 0,5 L ",
-  "description": "",
-  "price": 250,
-  "rating": 5,
-  "totalRatings": 5,
-  "category": "alcoholic",
-  "isPaid": false,
-  "amount": 0,
-  "identifier": 6403555720167424
-  },
-  {
-  "name": "Almalé - 1,5 L",
-  "description": "",
-  "price": 360,
-  "rating": 2,
-  "totalRatings": 53,
-  "category": "drink",
-  "isPaid": false,
-  "amount": 0,
-  "identifier": 6544293208522752
+  "totalRatings": 10,
+  "category": "main",
+  "image" : "angolmustaros.jpg"
   },
   {
   "name": "Baconos csirkenyárs",
@@ -226,8 +60,124 @@
   "rating": 5,
   "totalRatings": 22,
   "category": "main",
-  "isPaid": false,
-  "amount": 0,
-  "identifier": 6614661952700416
+  "image" : "baconoscsirkenyars.jpg"
+  },
+  {
+  "name": "Bajor szűzpecsenye",
+  "description": "A szűzpecsenyét kiklopfoljuk, fűszerezzük és megkenjük a hagymás, mustáros töltelékkel. Olajban pácoljuk majd rostlapon sütjük.",
+  "price": 1490,
+  "rating": 3,
+  "totalRatings": 9,
+  "category": "main",
+  "image" : "bajorszuzpecsenye.jpg"
+  },
+  {
+  "name": "Édes chilis csirkeszárny",
+  "description": "Rostlapon pirosra sütjük az előfőzött kentucky csirkeszárnyat, majd édes chili szószt öntünk rá.",
+  "price": 850,
+  "rating": 4,
+  "totalRatings": 567,
+  "category": "main",
+  "image" : "edeschilis.jpg"
+  },
+  {
+  "name": "Gesztenyepüré",
+  "description": "A gesztenyepürét ízesítjük, majd lereszeljük, és tejszínhabbal díszítjük.",
+  "price": 390,
+  "rating": 3,
+  "totalRatings": 32,
+  "category": "dessert",
+  "image" : "gesztenyepure.jpg"
+  },
+  {
+  "name": "Túrós palacsinta vanília öntettel",
+  "description": "Citrom és narancshéjjal, valamint vaníliás cukorral készített töltelékkel töltjük meg a palacsintákat. Vaníliamártást adok mellé.",
+  "price": 450,
+  "rating": 5,
+  "totalRatings": 43,
+  "category": "dessert",
+  "image" : "turospali.jpg"
+  },
+  {
+  "name": "Sárgabarack lekváros palacsinta ",
+  "description": "A legkedveltebb magyar hagyományos desszert, amibe házilag főzött sárgabarack lekvárt teszünk",
+  "price": 350,
+  "rating": 4,
+  "totalRatings": 15,
+  "category": "dessert",
+  "image" : "sargabarackpali.jpg"
+  },
+  {
+  "name": "Somlói galuska",
+  "description": "Csokoládés vaniliás piskóta vanilia krémmel rétegezve, diókrémmel izesítve csoki öntettel locsolva tejszinhabbal tálalva.",
+  "price": 550,
+  "rating": 5,
+  "totalRatings": 4,
+  "category": "dessert",
+  "image" : "somloi.jpg"
+  },
+  {
+  "name": "Almalé - 1,5 L",
+  "description": "",
+  "price": 360,
+  "rating": 2,
+  "totalRatings": 53,
+  "category": "drink"
+  },
+  {
+  "name": "Lipton ice tea barackos - 1,5L",
+  "description": "",
+  "price": 450,
+  "rating": 4,
+  "totalRatings": 12,
+  "category": "drink"
+  },
+  {
+  "name": "Kristályviz - szénsavas - 1,5 L ",
+  "description": "",
+  "price": 220,
+  "rating": 4,
+  "totalRatings": 10,
+  "category": "drink"
+  },
+  {
+  "name": "Schweppes narancs - 1 L",
+  "description": "",
+  "price": 360,
+  "rating": 3,
+  "totalRatings": 5,
+  "category": "drink"
+  },
+  {
+  "name": "Szalon sör - 0,5 L ",
+  "description": "",
+  "price": 250,
+  "rating": 5,
+  "totalRatings": 5,
+  "category": "alcoholic"
+  },
+  {
+  "name": "Finlandia - 1 L",
+  "description": "",
+  "price": 3250,
+  "rating": 5,
+  "totalRatings": 5,
+  "category": "alcoholic"
+  },
+  {
+  "name": "Gordon's Gin - 0.7 L",
+  "description": "",
+  "price": 5590,
+  "rating": 5,
+  "totalRatings": 5,
+  "category": "alcoholic"
+  },
+  {
+  "name": "Jack Daniel's - 1 L ",
+  "description": "",
+  "price": 9150,
+  "rating": 4,
+  "totalRatings": 5,
+  "category": "alcoholic"
   }
   ]

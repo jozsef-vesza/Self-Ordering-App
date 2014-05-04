@@ -10,15 +10,37 @@
 
 @interface SOLocation : NSObject<NSCoding>
 
+/**
+ *  Datastore identifier
+ */
 @property (nonatomic) NSNumber *identifier;
+
+/**
+ *  Name of the location
+ */
 @property (nonatomic,copy) NSString *name;
 @property (nonatomic) double stageCenterX;
 @property (nonatomic) double stageCenterY;
 @property (nonatomic) double stageWidth;
 @property (nonatomic) double stageHeight;
+
+/**
+ *  Tables available at location
+ */
 @property (nonatomic,copy) NSArray *tables;
+
+/**
+ *  Layout image of the location
+ */
 @property (strong, nonatomic) UIImage *locationImage;
 
+/**
+ *  Custom initializer using dictionary
+ *
+ *  @param aDictionary A dictionary containing location data
+ *
+ *  @return An initialized SOLocation instance
+ */
 - (instancetype)initWithDictionary:(NSDictionary *)aDictionary;
 
 @end

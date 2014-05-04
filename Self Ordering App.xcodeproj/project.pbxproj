@@ -565,6 +565,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Jozsef Vesza";
 				TargetAttributes = {
+					8E366D0418BE4F0B00856B51 = {
+						DevelopmentTeam = 22E8VLPFF8;
+					};
 					8E366D1F18BE4F0B00856B51 = {
 						TestTargetID = 8E366D0418BE4F0B00856B51;
 					};
@@ -834,6 +837,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Self Ordering App/Self Ordering App-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -843,6 +848,7 @@
 				);
 				INFOPLIST_FILE = "Self Ordering App/Self Ordering App-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -853,6 +859,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Self Ordering App/Self Ordering App-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -862,12 +870,14 @@
 				);
 				INFOPLIST_FILE = "Self Ordering App/Self Ordering App-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
 		8E366D3518BE4F0B00856B51 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB3C33BC094E43CE9F1DA02E /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Self Ordering App.app/Self Ordering App";
 				FRAMEWORK_SEARCH_PATHS = (

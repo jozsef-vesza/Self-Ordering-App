@@ -100,7 +100,6 @@
 
 - (IBAction)confirmButtonPressed:(UIBarButtonItem *)sender
 {
-    //TODO: update ticket with desk information
     [SOEventManager sharedInstance].selectedEvent.selectedTable = self.selectedTable;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
