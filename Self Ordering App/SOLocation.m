@@ -19,10 +19,6 @@
     {
         _identifier = aDictionary[@"identifier"];
         _name = aDictionary[@"name"];
-        _stageCenterX = [aDictionary[@"stageCenterX"] doubleValue];
-        _stageCenterY = [aDictionary[@"stageCenterY"] doubleValue];
-        _stageHeight = [aDictionary[@"stageHeight"] doubleValue];
-        _stageWidth = [aDictionary[@"stageWidth"] doubleValue];
         _tables = [self parseTablesFromResponse:aDictionary[@"tables"]];
     }
     
@@ -36,10 +32,6 @@
     {
         _identifier = [aDecoder decodeObjectForKey:@"identifier"];
         _name = [aDecoder decodeObjectForKey:@"name"];
-        _stageCenterX = [aDecoder decodeDoubleForKey:@"stageCenterX"];
-        _stageCenterY = [aDecoder decodeDoubleForKey:@"stageCenterY"];
-        _stageHeight = [aDecoder decodeDoubleForKey:@"stageHeight"];
-        _stageWidth = [aDecoder decodeDoubleForKey:@"stageWidth"];
         _tables = [aDecoder decodeObjectForKey:@"tables"];
         _locationImage = [aDecoder decodeObjectForKey:@"locationImage"];
     }
@@ -50,10 +42,6 @@
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.name forKey:@"name"];
-    [aCoder encodeDouble:self.stageCenterX forKey:@"stageCenterX"];
-    [aCoder encodeDouble:self.stageCenterX forKey:@"stageCenterY"];
-    [aCoder encodeDouble:self.stageHeight forKey:@"stageHeight"];
-    [aCoder encodeDouble:self.stageWidth forKey:@"stageWidth"];
     [aCoder encodeObject:self.tables forKey:@"tables"];
     [aCoder encodeObject:self.identifier forKey:@"identifier"];
     [aCoder encodeObject:self.locationImage forKey:@"locationImage"];

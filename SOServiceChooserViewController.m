@@ -10,6 +10,9 @@
 
 @interface SOServiceChooserViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *eventServiceButton;
+@property (weak, nonatomic) IBOutlet UIButton *mealServiceButton;
+
 @end
 
 @implementation SOServiceChooserViewController
@@ -18,8 +21,22 @@
 {
     [super viewDidLoad];
     self.navigationController.toolbarHidden = YES;
-    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"Kilépés" style:UIBarButtonItemStyleBordered target:self action:@selector(logoutButtonPressed)];
-    logoutButton.tintColor = [UIColor redColor];
+    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"Kilépés" style:UIBarButtonItemStyleDone target:self action:@selector(logoutButtonPressed)];
+    [self.eventServiceButton setImage:[[UIImage imageNamed:@"ticket"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+    self.eventServiceButton.imageView.tintColor = [UIColor whiteColor];
+    UILabel * eventServiceLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMinX(self.eventServiceButton.frame), CGRectGetMaxY(self.eventServiceButton.frame) - 40 , self.eventServiceButton.frame.size.width, 20)];
+    eventServiceLabel.textAlignment = NSTextAlignmentCenter;
+    eventServiceLabel.textColor = [UIColor whiteColor];
+    eventServiceLabel.text = @"Jegyrendelés";
+//    [self.view addSubview:eventServiceLabel];
+    
+    [self.mealServiceButton setImage:[[UIImage imageNamed:@"waiter"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+    self.mealServiceButton.imageView.tintColor = [UIColor whiteColor];
+    UILabel * mealServiceLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMinX(self.mealServiceButton.frame), CGRectGetMaxY(self.mealServiceButton.frame) - 40 , self.mealServiceButton.frame.size.width, 20)];
+    mealServiceLabel.textAlignment = NSTextAlignmentCenter;
+    mealServiceLabel.textColor = [UIColor whiteColor];
+    mealServiceLabel.text = @"Ételrendelés";
+//    [self.view addSubview:mealServiceLabel];
     self.navigationItem.leftBarButtonItem = logoutButton;
 }
 

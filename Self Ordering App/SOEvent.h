@@ -81,6 +81,20 @@
  */
 - (instancetype)initWithDictionary:(NSDictionary *)aDictionary;
 
+/**
+ *  Method for formatting date into a human-readable style
+ *
+ *  @return the formatted date
+ */
+- (NSString *)prettyDate;
+
+/**
+ *  Convenience constructor using another event object
+ *
+ *  @param anEvent the event to help the configuration
+ *
+ *  @return the configured instance of this class
+ */
 + (instancetype)eventWithEvent:(SOEvent *)anEvent;
 
 @end

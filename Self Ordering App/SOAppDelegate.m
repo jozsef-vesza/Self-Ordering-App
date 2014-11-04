@@ -14,6 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [[SOSessionManager sharedInstance] clearSessionCache];
+//    [[UIView appearance] setTintColor:[UIColor colorWithRed:0 green:0.730596 blue:0.730596 alpha:1]];
     return YES;
 }
 

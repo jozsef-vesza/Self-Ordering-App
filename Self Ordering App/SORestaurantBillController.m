@@ -27,6 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.tabBarController.tabBar.tintColor = [UIColor colorWithRed:0 green:0.730596 blue:0.730596 alpha:1];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -77,6 +78,7 @@
          CGRectGetHeight(self.tabBarController.tabBar.frame),
          0.0f
          );
+        _billView.tintColor = [UIColor colorWithRed:0 green:0.730596 blue:0.730596 alpha:1];
     }
     return _billView;
 }

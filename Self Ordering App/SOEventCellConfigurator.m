@@ -57,6 +57,7 @@
     SOEvent *eventInCell = (SOEvent *)anObject;
     SORegularEventTableViewCell *regularCell = (SORegularEventTableViewCell *)aCell;
     regularCell.titleLabel.text = eventInCell.eventTitle;
+    regularCell.detailTextLabel.text = [NSString stringWithFormat:@"%@\t%@", [eventInCell prettyDate], eventInCell.location.name];
     return regularCell;
 }
 

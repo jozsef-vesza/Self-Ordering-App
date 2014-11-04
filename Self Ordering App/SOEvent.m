@@ -108,6 +108,14 @@
     return parsedDate;
 }
 
+- (NSString *)prettyDate
+{
+    NSDateFormatter *outFormat = [[NSDateFormatter alloc] init];
+    outFormat.dateFormat = @"YYYY.MM.dd. HH:mm";
+    NSString *prettyString = [outFormat stringFromDate:self.eventDate];
+    return prettyString;
+}
+
 - (SOLocation *)parseLocationFromResponse:(id)aResponse
 {
     return [[SOLocation alloc] initWithDictionary:aResponse];

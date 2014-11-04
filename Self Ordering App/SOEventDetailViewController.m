@@ -51,7 +51,7 @@
 - (void)setupView
 {
     self.titleLabel.text = self.eventManager.selectedEvent.eventTitle;
-    self.dateLabel.text = [NSString stringWithFormat:@"%@", self.eventManager.selectedEvent.eventDate];
+    self.dateLabel.text = [NSString stringWithFormat:@"%@", [self.eventManager.selectedEvent prettyDate]];
     self.descriptionLabel.text = self.eventManager.selectedEvent.eventDescription;
     self.descriptionLabel.editable = NO;
     self.ticketCountField.userInteractionEnabled = NO;

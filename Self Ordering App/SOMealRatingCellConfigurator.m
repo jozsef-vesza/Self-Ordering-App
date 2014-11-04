@@ -22,8 +22,9 @@
     SORatingCell *currentCell = (SORatingCell *)aCell;
     SOMeal *mealInCell = (SOMeal *)anObject;
     currentCell.mealNameLabel.text = mealInCell.mealName;
-    currentCell.mealRateView.notSelectedImage = [UIImage imageNamed:@"1386029323_star-0.png"];
-    currentCell.mealRateView.fullSelectedImage = [UIImage imageNamed:@"1386029310_star-4.png"];
+    currentCell.mealRateView.notSelectedImage = [UIImage imageNamed:@"StarEmptyLarge"];
+    currentCell.mealRateView.fullSelectedImage = [[UIImage imageNamed:@"StarFullLarge"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    
     currentCell.mealRateView.rating = 0;
     currentCell.mealRateView.editable = YES;
     currentCell.mealRateView.maxRating = 5;

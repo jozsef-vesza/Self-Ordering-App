@@ -66,6 +66,13 @@
  */
 - (instancetype)initWithDictionary:(NSDictionary *)aDictionary;
 
+/**
+ *  Convenience initializer using a meal object
+ *
+ *  @param aMeal he meal object to help initialization
+ *
+ *  @return an initialized instance of this class
+ */
 + (instancetype)mealWithMeal:(SOMeal *)aMeal;
 
 - (NSDictionary *)dictionaryForJSON;

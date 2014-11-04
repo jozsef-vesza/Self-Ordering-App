@@ -19,10 +19,6 @@
  *  Name of the location
  */
 @property (nonatomic,copy) NSString *name;
-@property (nonatomic) double stageCenterX;
-@property (nonatomic) double stageCenterY;
-@property (nonatomic) double stageWidth;
-@property (nonatomic) double stageHeight;
 
 /**
  *  Tables available at location

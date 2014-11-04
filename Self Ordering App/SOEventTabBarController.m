@@ -19,6 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.tintColor = [UIColor colorWithRed:0 green:0.730596 blue:0.730596 alpha:1];
     self.sessionManager = [SOSessionManager sharedInstance];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTabBadge) name:eventOrderRemovedNotification object:nil];
 }

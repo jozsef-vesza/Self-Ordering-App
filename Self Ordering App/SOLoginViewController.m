@@ -28,7 +28,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     self.sessionManager = [SOSessionManager sharedInstance];
     self.userNameField.delegate = self;
     self.passwordField.delegate = self;

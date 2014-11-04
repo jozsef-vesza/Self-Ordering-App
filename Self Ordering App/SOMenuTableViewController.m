@@ -12,7 +12,6 @@
 #import "SOMenuCellConfigurator.h"
 #import "SOSimpleMealCell.h"
 #import "SOExpandedMealCell.h"
-#import "SOMealImageController.h"
 
 @interface SOMenuTableViewController ()
 
@@ -30,6 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.tabBarController.tabBar.tintColor = [UIColor colorWithRed:0 green:0.730596 blue:0.730596 alpha:1];
     self.mealManager = [SOMealManager sharedInstance];
     [self setupDataSource];
 }
@@ -39,7 +39,6 @@
     [super viewWillAppear:animated];
     [self setupViewElements];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stepperChangeReceived:) name:menuStepperChangedNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mealImageTapped:) name:mealImageTappedNotification object:nil];
     dispatch_async(dispatch_get_main_queue(), ^
     {
         [self.tableView reloadData];
@@ -178,7 +177,7 @@
     
     [tableView endUpdates];
     
-    [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+    [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -195,17 +194,6 @@
     }
     
     return 44;
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"mealImageSegue"])
-    {
-        UIImage *img = sender;
-        UINavigationController *navController = [segue destinationViewController];
-        SOMealImageController *imageController = (SOMealImageController *)navController.topViewController;
-        imageController.img = img;
-    }
 }
 
 @end

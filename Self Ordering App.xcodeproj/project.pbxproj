@@ -21,6 +21,7 @@
 		8E0C8A0518DF9B710003CC02 /* SOExpandedMealCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C8A0418DF9B710003CC02 /* SOExpandedMealCell.m */; };
 		8E0C8A0818DF9C4E0003CC02 /* SOMenuCellConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C8A0718DF9C4E0003CC02 /* SOMenuCellConfigurator.m */; };
 		8E1D548D18E2D1B0000BBC30 /* EmbeddedMeal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E1D548C18E2D1B0000BBC30 /* EmbeddedMeal.xib */; };
+		8E25E4BE191B9FBF003AB883 /* SOViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E25E4BD191B9FBF003AB883 /* SOViewModelTests.m */; };
 		8E2AE99B18E1BC98006A3367 /* SOExpandedMealCell+StepperNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AE99A18E1BC98006A3367 /* SOExpandedMealCell+StepperNotifications.m */; };
 		8E355B0E18C09E39004F5198 /* SOOrderedTicketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E355B0D18C09E39004F5198 /* SOOrderedTicketsViewController.m */; };
 		8E355B1518C0A35B004F5198 /* JVTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E355B1418C0A35B004F5198 /* JVTableViewDataSource.m */; };
@@ -66,7 +67,15 @@
 		8E51AAE818DB227000223638 /* NSArray+removeDuplicateOrders.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E51AAE718DB227000223638 /* NSArray+removeDuplicateOrders.m */; };
 		8E51AAEB18DB2E5B00223638 /* SOEventOrderDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E51AAEA18DB2E5B00223638 /* SOEventOrderDataSource.m */; };
 		8E51AAED18DB31FC00223638 /* NoOrderedEventsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E51AAEC18DB31FC00223638 /* NoOrderedEventsView.xib */; };
-		8E71CB7818F9B74B0053E5E9 /* SOMealImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E71CB7718F9B74B0053E5E9 /* SOMealImageController.m */; };
+		8E7E012B1917BC64006EDE61 /* calendar-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E7E012A1917BC64006EDE61 /* calendar-50@2x.png */; };
+		8E7E012D1917BCF6006EDE61 /* shopping_cart_loaded-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E7E012C1917BCF6006EDE61 /* shopping_cart_loaded-50@2x.png */; };
+		8E7E013B1917C06C006EDE61 /* comedy-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E7E013A1917C06C006EDE61 /* comedy-50@2x.png */; };
+		8E7E013D1917C0B0006EDE61 /* restaurant-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E7E013C1917C0B0006EDE61 /* restaurant-50@2x.png */; };
+		8E7E013F1917C0E1006EDE61 /* bill-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E7E013E1917C0E1006EDE61 /* bill-50@2x.png */; };
+		8E7E01421917C382006EDE61 /* StarEmptyLarge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E7E01401917C382006EDE61 /* StarEmptyLarge@2x.png */; };
+		8E7E01431917C382006EDE61 /* StarFullLarge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E7E01411917C382006EDE61 /* StarFullLarge@2x.png */; };
+		8E7FC02819202916004C119C /* ticket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E7FC02719202916004C119C /* ticket@2x.png */; };
+		8E7FC02A19202962004C119C /* waiter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E7FC02919202962004C119C /* waiter@2x.png */; };
 		8E8BECE918E2BF490065E6CD /* SORestaurantBillController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8BECE818E2BF490065E6CD /* SORestaurantBillController.m */; };
 		8E8CE06118C6517C0031567E /* SOEventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8CE06018C6517C0031567E /* SOEventDetailViewController.m */; };
 		8EA74BB218E7B968008CE804 /* RestaurantBillView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EA74BB118E7B968008CE804 /* RestaurantBillView.xib */; };
@@ -124,6 +133,7 @@
 		8E0C8A0618DF9C4E0003CC02 /* SOMenuCellConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOMenuCellConfigurator.h; sourceTree = "<group>"; };
 		8E0C8A0718DF9C4E0003CC02 /* SOMenuCellConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOMenuCellConfigurator.m; sourceTree = "<group>"; };
 		8E1D548C18E2D1B0000BBC30 /* EmbeddedMeal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmbeddedMeal.xib; sourceTree = "<group>"; };
+		8E25E4BD191B9FBF003AB883 /* SOViewModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOViewModelTests.m; sourceTree = "<group>"; };
 		8E2AE99918E1BC98006A3367 /* SOExpandedMealCell+StepperNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SOExpandedMealCell+StepperNotifications.h"; sourceTree = "<group>"; };
 		8E2AE99A18E1BC98006A3367 /* SOExpandedMealCell+StepperNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SOExpandedMealCell+StepperNotifications.m"; sourceTree = "<group>"; };
 		8E355B0C18C09E39004F5198 /* SOOrderedTicketsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOOrderedTicketsViewController.h; sourceTree = "<group>"; };
@@ -202,8 +212,15 @@
 		8E51AAE918DB2E5B00223638 /* SOEventOrderDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOEventOrderDataSource.h; sourceTree = "<group>"; };
 		8E51AAEA18DB2E5B00223638 /* SOEventOrderDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOEventOrderDataSource.m; sourceTree = "<group>"; };
 		8E51AAEC18DB31FC00223638 /* NoOrderedEventsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoOrderedEventsView.xib; sourceTree = "<group>"; };
-		8E71CB7618F9B74B0053E5E9 /* SOMealImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOMealImageController.h; sourceTree = "<group>"; };
-		8E71CB7718F9B74B0053E5E9 /* SOMealImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOMealImageController.m; sourceTree = "<group>"; };
+		8E7E012A1917BC64006EDE61 /* calendar-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-50@2x.png"; sourceTree = "<group>"; };
+		8E7E012C1917BCF6006EDE61 /* shopping_cart_loaded-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shopping_cart_loaded-50@2x.png"; sourceTree = "<group>"; };
+		8E7E013A1917C06C006EDE61 /* comedy-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "comedy-50@2x.png"; sourceTree = "<group>"; };
+		8E7E013C1917C0B0006EDE61 /* restaurant-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "restaurant-50@2x.png"; sourceTree = "<group>"; };
+		8E7E013E1917C0E1006EDE61 /* bill-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bill-50@2x.png"; sourceTree = "<group>"; };
+		8E7E01401917C382006EDE61 /* StarEmptyLarge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StarEmptyLarge@2x.png"; sourceTree = "<group>"; };
+		8E7E01411917C382006EDE61 /* StarFullLarge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StarFullLarge@2x.png"; sourceTree = "<group>"; };
+		8E7FC02719202916004C119C /* ticket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ticket@2x.png"; sourceTree = "<group>"; };
+		8E7FC02919202962004C119C /* waiter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "waiter@2x.png"; sourceTree = "<group>"; };
 		8E8BECE718E2BF490065E6CD /* SORestaurantBillController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SORestaurantBillController.h; sourceTree = "<group>"; };
 		8E8BECE818E2BF490065E6CD /* SORestaurantBillController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SORestaurantBillController.m; sourceTree = "<group>"; };
 		8E8CE05F18C6517C0031567E /* SOEventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOEventDetailViewController.h; sourceTree = "<group>"; };
@@ -307,6 +324,15 @@
 		8E355B3E18C1E150004F5198 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8E7FC02919202962004C119C /* waiter@2x.png */,
+				8E7FC02719202916004C119C /* ticket@2x.png */,
+				8E7E01401917C382006EDE61 /* StarEmptyLarge@2x.png */,
+				8E7E01411917C382006EDE61 /* StarFullLarge@2x.png */,
+				8E7E013E1917C0E1006EDE61 /* bill-50@2x.png */,
+				8E7E013C1917C0B0006EDE61 /* restaurant-50@2x.png */,
+				8E7E013A1917C06C006EDE61 /* comedy-50@2x.png */,
+				8E7E012C1917BCF6006EDE61 /* shopping_cart_loaded-50@2x.png */,
+				8E7E012A1917BC64006EDE61 /* calendar-50@2x.png */,
 				8E0754A718ED509000154487 /* mockUser.json */,
 				8EA74BBC18E8007B008CE804 /* 1386029310_star-4.png */,
 				8EA74BBD18E8007B008CE804 /* 1386029323_star-0.png */,
@@ -400,6 +426,7 @@
 				8E0754A518ED4F0C00154487 /* SOParsingTests.m */,
 				8E0754A918ED5A0600154487 /* SONetworkingTests.m */,
 				8E366D2818BE4F0B00856B51 /* Supporting Files */,
+				8E25E4BD191B9FBF003AB883 /* SOViewModelTests.m */,
 			);
 			path = "Self Ordering AppTests";
 			sourceTree = "<group>";
@@ -509,8 +536,6 @@
 				8EA74BC318E87043008CE804 /* SOPaymentSuccessController.m */,
 				8EE055DD18EE0DF800DB5F08 /* SOTablePickerController.h */,
 				8EE055DE18EE0DF800DB5F08 /* SOTablePickerController.m */,
-				8E71CB7618F9B74B0053E5E9 /* SOMealImageController.h */,
-				8E71CB7718F9B74B0053E5E9 /* SOMealImageController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -567,6 +592,11 @@
 				TargetAttributes = {
 					8E366D0418BE4F0B00856B51 = {
 						DevelopmentTeam = 22E8VLPFF8;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 					8E366D1F18BE4F0B00856B51 = {
 						TestTargetID = 8E366D0418BE4F0B00856B51;
@@ -597,21 +627,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E7E012D1917BCF6006EDE61 /* shopping_cart_loaded-50@2x.png in Resources */,
 				8EA74BC018E8007B008CE804 /* 1386029323_star-0.png in Resources */,
 				8E366D3818BE4F5500856B51 /* SOStoryBoard.storyboard in Resources */,
+				8E7E013D1917C0B0006EDE61 /* restaurant-50@2x.png in Resources */,
 				8E0754A818ED509000154487 /* mockUser.json in Resources */,
 				8E355B4218C1E193004F5198 /* mockCustomers.json in Resources */,
 				8E355B4318C1E193004F5198 /* mockEvents.json in Resources */,
 				8E03E4BC18D9032F002F7D3E /* EmbeddedTableView.xib in Resources */,
 				8EA74BC118E8007B008CE804 /* star-rating-icon.png in Resources */,
 				8E51AAED18DB31FC00223638 /* NoOrderedEventsView.xib in Resources */,
+				8E7FC02819202916004C119C /* ticket@2x.png in Resources */,
 				8E366D4E18BF308700856B51 /* Localizable.strings in Resources */,
 				8E366D1318BE4F0B00856B51 /* InfoPlist.strings in Resources */,
 				8EA74BBF18E8007B008CE804 /* 1386029310_star-4.png in Resources */,
+				8E7E01431917C382006EDE61 /* StarFullLarge@2x.png in Resources */,
 				8E366D1B18BE4F0B00856B51 /* Images.xcassets in Resources */,
+				8E7E013B1917C06C006EDE61 /* comedy-50@2x.png in Resources */,
+				8E7E01421917C382006EDE61 /* StarEmptyLarge@2x.png in Resources */,
 				8E1D548D18E2D1B0000BBC30 /* EmbeddedMeal.xib in Resources */,
 				8EA74BB218E7B968008CE804 /* RestaurantBillView.xib in Resources */,
+				8E7E012B1917BC64006EDE61 /* calendar-50@2x.png in Resources */,
 				8E355B4418C1E193004F5198 /* mockMeals.json in Resources */,
+				8E7E013F1917C0E1006EDE61 /* bill-50@2x.png in Resources */,
+				8E7FC02A19202962004C119C /* waiter@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,7 +720,6 @@
 				8EA74BB518E7BE3F008CE804 /* SORestaurantBillView.m in Sources */,
 				8E0C89F918DF672C0003CC02 /* SOMeal.m in Sources */,
 				8E355B4818C1E2B1004F5198 /* NSJSONSerialization+parseObjectArray.m in Sources */,
-				8E71CB7818F9B74B0053E5E9 /* SOMealImageController.m in Sources */,
 				8E2AE99B18E1BC98006A3367 /* SOExpandedMealCell+StepperNotifications.m in Sources */,
 				8E3EDCB818E2BA010060E1FE /* SOMealOrderCellConfigurator.m in Sources */,
 				8E355B3A18C1DE85004F5198 /* SOEventManager.m in Sources */,
@@ -724,6 +762,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E25E4BE191B9FBF003AB883 /* SOViewModelTests.m in Sources */,
 				8E0754A618ED4F0C00154487 /* SOParsingTests.m in Sources */,
 				8E0754AA18ED5A0600154487 /* SONetworkingTests.m in Sources */,
 			);

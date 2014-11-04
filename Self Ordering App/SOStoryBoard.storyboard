@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4KB-3y-WZL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4KB-3y-WZL">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -32,14 +32,18 @@
                                 <rect key="frame" x="40" y="354" width="101" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mVl-fZ-HtR">
                                 <rect key="frame" x="231" y="349" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.0" green="0.73059612770000004" blue="0.73059612770000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="onTintColor" red="0.0" green="0.73059612770000004" blue="0.73059612770000004" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="bEG-Mp-YD7" secondAttribute="centerX" id="276-NF-mVO"/>
                             <constraint firstItem="bEG-Mp-YD7" firstAttribute="width" secondItem="Zed-HW-1h1" secondAttribute="width" id="3Jw-Vz-O6s"/>
@@ -92,10 +96,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAi-kd-dm6">
-                                <rect key="frame" x="0.0" y="64" width="320" height="252"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAi-kd-dm6">
+                                <rect key="frame" x="0.0" y="64" width="310" height="247"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" red="0.0" green="0.73059612770000004" blue="0.73059612770000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -104,9 +109,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehe-bM-yJv">
-                                <rect key="frame" x="0.0" y="316" width="320" height="252"/>
+                                <rect key="frame" x="10" y="321" width="300" height="237"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.73059612770000004" blue="0.73059612770000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -116,15 +122,16 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0" green="0.73059612770000004" blue="0.73059612770000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="ehe-bM-yJv" firstAttribute="top" secondItem="uAi-kd-dm6" secondAttribute="bottom" id="0JL-Qm-FOf"/>
-                            <constraint firstItem="uAi-kd-dm6" firstAttribute="top" secondItem="SKY-Cs-0Fx" secondAttribute="bottom" id="1Qt-ln-DWp"/>
+                            <constraint firstItem="ehe-bM-yJv" firstAttribute="top" secondItem="uAi-kd-dm6" secondAttribute="bottom" constant="10" id="0JL-Qm-FOf"/>
+                            <constraint firstItem="uAi-kd-dm6" firstAttribute="top" secondItem="SKY-Cs-0Fx" secondAttribute="bottom" constant="10" id="1Qt-ln-DWp"/>
                             <constraint firstAttribute="centerX" secondItem="ehe-bM-yJv" secondAttribute="centerX" id="29U-k4-K8w"/>
-                            <constraint firstAttribute="trailing" secondItem="ehe-bM-yJv" secondAttribute="trailing" id="2jN-n3-nwr"/>
-                            <constraint firstItem="py8-UC-dYg" firstAttribute="top" secondItem="ehe-bM-yJv" secondAttribute="bottom" id="QbQ-7k-gDE"/>
-                            <constraint firstItem="uAi-kd-dm6" firstAttribute="leading" secondItem="cfR-9q-aOr" secondAttribute="leading" id="Qt8-XX-bcE"/>
-                            <constraint firstItem="ehe-bM-yJv" firstAttribute="leading" secondItem="cfR-9q-aOr" secondAttribute="leading" id="UgF-DF-39c"/>
-                            <constraint firstAttribute="trailing" secondItem="uAi-kd-dm6" secondAttribute="trailing" id="VbX-hP-Una"/>
+                            <constraint firstAttribute="trailing" secondItem="ehe-bM-yJv" secondAttribute="trailing" constant="10" id="2jN-n3-nwr"/>
+                            <constraint firstItem="py8-UC-dYg" firstAttribute="top" secondItem="ehe-bM-yJv" secondAttribute="bottom" constant="10" id="QbQ-7k-gDE"/>
+                            <constraint firstItem="uAi-kd-dm6" firstAttribute="leading" secondItem="cfR-9q-aOr" secondAttribute="leading" constant="10" id="Qt8-XX-bcE"/>
+                            <constraint firstItem="ehe-bM-yJv" firstAttribute="leading" secondItem="cfR-9q-aOr" secondAttribute="leading" constant="10" id="UgF-DF-39c"/>
+                            <constraint firstAttribute="trailing" secondItem="uAi-kd-dm6" secondAttribute="trailing" constant="10" id="VbX-hP-Una"/>
                             <constraint firstAttribute="centerX" secondItem="uAi-kd-dm6" secondAttribute="centerX" id="Vj3-s3-n9s"/>
                             <constraint firstItem="uAi-kd-dm6" firstAttribute="width" secondItem="ehe-bM-yJv" secondAttribute="width" id="YQ9-xW-4Pe"/>
                             <constraint firstItem="uAi-kd-dm6" firstAttribute="height" secondItem="ehe-bM-yJv" secondAttribute="height" id="khB-6E-Jd4"/>
@@ -135,6 +142,8 @@
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="eventServiceButton" destination="uAi-kd-dm6" id="Tbr-q0-qnK"/>
+                        <outlet property="mealServiceButton" destination="ehe-bM-yJv" id="Rne-CY-vZe"/>
                         <segue destination="grX-ej-rSj" kind="push" identifier="eventListSegue" id="WiZ-z0-S54"/>
                         <segue destination="1ge-MC-J7r" kind="push" identifier="menuSegue" id="PMz-of-KLx"/>
                     </connections>
@@ -258,7 +267,6 @@
                                     <outlet property="mealDescriptionText" destination="IT3-Eg-3BP" id="2kI-Mf-jD0"/>
                                     <outlet property="mealImageView" destination="cuw-lz-Cbz" id="GgX-YI-F0I"/>
                                     <outlet property="mealRateView" destination="AWb-yO-RCv" id="mSp-fz-MON"/>
-                                    <segue destination="AoP-Sr-klG" kind="modal" identifier="mealImageSegue" id="h1c-1o-HXD"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="drinkCell" id="VpJ-ah-Rzp" customClass="SODrinkTVCell">
@@ -301,7 +309,7 @@
                             <outlet property="delegate" destination="VS8-Iu-WuB" id="qcA-nB-GAl"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Étlap" id="mEf-ul-DR3"/>
+                    <tabBarItem key="tabBarItem" title="Étlap" image="restaurant-50.png" id="mEf-ul-DR3"/>
                     <navigationItem key="navigationItem" id="eCu-jO-psE"/>
                     <connections>
                         <segue destination="n5Z-8f-ebZ" kind="push" identifier="tempOrderSeque" id="s5g-kt-oP4"/>
@@ -311,51 +319,11 @@
             </objects>
             <point key="canvasLocation" x="4068" y="-704"/>
         </scene>
-        <!--Meal Image Controller-->
-        <scene sceneID="Rd4-a9-eTl">
-            <objects>
-                <viewController id="G4w-L7-gGw" customClass="SOMealImageController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7QR-lk-fuU"/>
-                        <viewControllerLayoutGuide type="bottom" id="5IQ-6R-1KG"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Vfa-1x-lI6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iz2-v0-aEj">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="5IQ-6R-1KG" firstAttribute="top" secondItem="Iz2-v0-aEj" secondAttribute="bottom" id="05a-E7-MN4"/>
-                            <constraint firstAttribute="trailing" secondItem="Iz2-v0-aEj" secondAttribute="trailing" id="kbE-ca-qUt"/>
-                            <constraint firstItem="Iz2-v0-aEj" firstAttribute="leading" secondItem="Vfa-1x-lI6" secondAttribute="leading" id="laf-Ba-CgP"/>
-                            <constraint firstItem="Iz2-v0-aEj" firstAttribute="top" secondItem="Vfa-1x-lI6" secondAttribute="top" id="rTl-eb-OlB"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="NI1-km-oZ6">
-                        <barButtonItem key="rightBarButtonItem" title="Vissza" id="0M6-3d-4FP">
-                            <connections>
-                                <action selector="backButtonPressed:" destination="G4w-L7-gGw" id="JJg-6f-NJw"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="mealImageScrollView" destination="Iz2-v0-aEj" id="6On-kW-roD"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Iq8-uI-fWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4594" y="23"/>
-        </scene>
         <!--Restaurant Bill Controller - Rendelések-->
         <scene sceneID="LGl-7S-sec">
             <objects>
                 <viewController id="6v5-I7-mMN" customClass="SORestaurantBillController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Rendelések" id="z4N-LG-BwG"/>
+                    <tabBarItem key="tabBarItem" title="Rendelések" image="bill-50.png" id="z4N-LG-BwG"/>
                     <connections>
                         <segue destination="wI2-g7-7zV" kind="modal" identifier="paymentSuccessSegue" id="8fJ-ro-GOH"/>
                     </connections>
@@ -556,11 +524,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hoa-Zf-gdX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0" green="0.73059612770000004" blue="0.73059612770000004" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="7m8-61-stQ">
                         <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0" green="0.73059612771739135" blue="0.73059612771739135" alpha="1" colorSpace="calibratedRGB"/>
                     </toolbar>
                     <connections>
                         <segue destination="gpy-VA-FF9" kind="relationship" relationship="rootViewController" id="MZd-0g-Rbg"/>
@@ -578,6 +548,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PeM-p5-OTS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0" green="0.73059612770000004" blue="0.73059612770000004" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -837,7 +808,7 @@
                             <outlet property="delegate" destination="kJP-L8-w2h" id="9Qi-lg-nL3"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Műsor" id="D9g-yH-3fd"/>
+                    <tabBarItem key="tabBarItem" title="Műsor" image="comedy-50.png" id="D9g-yH-3fd"/>
                     <navigationItem key="navigationItem" title="Műsor" id="Urx-Fv-5qR">
                         <barButtonItem key="backBarButtonItem" title="Vissza" id="eZI-f5-HxX"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="ziS-DI-jcB">
@@ -889,6 +860,7 @@
                             <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="R5j-0e-c1J">
                                 <rect key="frame" x="206" y="519" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="tintColor" red="0.0" green="0.73059612770000004" blue="0.73059612770000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="ticketCountChanged:" destination="rkw-u9-VCH" eventType="valueChanged" id="k0I-xE-cUv"/>
                                 </connections>
@@ -913,6 +885,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Válasszon asztalt!">
+                                    <color key="titleColor" red="0.0" green="0.73059612770000004" blue="0.73059612770000004" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1016,7 +989,7 @@
         <scene sceneID="kic-lo-8HO">
             <objects>
                 <viewController id="w3l-S7-IBs" customClass="SOOrderedTicketsViewController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Kosár" id="bXz-Cr-rpH"/>
+                    <tabBarItem key="tabBarItem" title="Kosár" image="shopping_cart_loaded-50.png" id="bXz-Cr-rpH"/>
                     <connections>
                         <segue destination="uel-qr-KKZ" kind="push" identifier="orderedEventSelectedSegue" id="qel-UK-wM4"/>
                     </connections>
@@ -1141,7 +1114,7 @@
                                 <action selector="dismissButtonTapped:" destination="BmX-MK-585" id="GaL-s1-9ti"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="IHR-ms-f1d">
+                        <barButtonItem key="rightBarButtonItem" image="calendar-50.png" id="IHR-ms-f1d">
                             <connections>
                                 <action selector="saveToCalButtonTapped:" destination="BmX-MK-585" id="i4g-3V-nh6"/>
                             </connections>
@@ -1167,6 +1140,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="AtT-Pf-dEm">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0" green="0.73059612770000004" blue="0.73059612770000004" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="kJP-L8-w2h" kind="relationship" relationship="viewControllers" id="I6A-Hh-2Gi"/>
@@ -1187,6 +1161,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="Awd-Vx-1qZ">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0" green="0.73059612770000004" blue="0.73059612770000004" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="VS8-Iu-WuB" kind="relationship" relationship="viewControllers" id="DAz-ke-mzN"/>
@@ -1205,6 +1180,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xGd-Zs-Qnc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0" green="0.73059612770000004" blue="0.73059612770000004" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1223,6 +1199,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XbO-45-Gm2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0" green="0.73059612770000004" blue="0.73059612770000004" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="NCb-aT-IIC">
@@ -1236,24 +1213,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJu-No-H1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5799" y="-2512"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="yfd-Wo-TMo">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AoP-Sr-klG" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NAh-bP-zt9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="G4w-L7-gGw" kind="relationship" relationship="rootViewController" id="NWe-SQ-wHQ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qQN-if-fUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4068" y="23"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NvQ-DS-Axc">
@@ -1275,6 +1234,14 @@
             <point key="canvasLocation" x="4915" y="797"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bill-50.png" width="25" height="25"/>
+        <image name="calendar-50.png" width="25" height="25"/>
+        <image name="comedy-50.png" width="25" height="25"/>
+        <image name="restaurant-50.png" width="25" height="25"/>
+        <image name="shopping_cart_loaded-50.png" width="25" height="25"/>
+    </resources>
+    <color key="tintColor" red="0.0" green="0.73059612770000004" blue="0.73059612770000004" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

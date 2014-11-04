@@ -46,7 +46,7 @@
 {
     SOEvent *currentEvent = self.eventManager.selectedEvent;
     self.eventTitleLabel.text = currentEvent.eventTitle;
-    self.eventDateLabel.text = [NSString stringWithFormat:@"%@", currentEvent.eventDate];
+    self.eventDateLabel.text = [NSString stringWithFormat:@"%@", [currentEvent prettyDate]];
     self.eventDescriptionText.text = currentEvent.eventDescription;
     self.eventDescriptionText.editable = NO;
     self.eventTicketsLabel.text = [NSString stringWithFormat:@"%ld db jegy", (long)currentEvent.numberOfTicketsOrdered];

@@ -38,8 +38,8 @@
     if ([aCell.reuseIdentifier isEqualToString:@"drinkCell"])
     {
         SODrinkTVCell *drinkCell = (SODrinkTVCell *)aCell;
-        drinkCell.rateView.notSelectedImage = [UIImage imageNamed:@"1386029323_star-0.png"];
-        drinkCell.rateView.fullSelectedImage = [UIImage imageNamed:@"1386029310_star-4.png"];
+        drinkCell.rateView.notSelectedImage = [UIImage imageNamed:@"StarEmptyLarge"];
+        drinkCell.rateView.fullSelectedImage = [[UIImage imageNamed:@"StarFullLarge"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         drinkCell.rateView.rating = mealInCell.mealRating;
         drinkCell.rateView.editable = NO;
         drinkCell.rateView.maxRating = 5;
@@ -65,16 +65,14 @@
     expandedCell.mealAmountStepper.wraps = NO;
     expandedCell.mealAmountStepper.autorepeat = YES;
     expandedCell.mealAmountStepper.continuous = YES;
-    expandedCell.mealRateView.notSelectedImage = [UIImage imageNamed:@"1386029323_star-0.png"];
-    expandedCell.mealRateView.fullSelectedImage = [UIImage imageNamed:@"1386029310_star-4.png"];
+    expandedCell.mealRateView.notSelectedImage = [UIImage imageNamed:@"StarEmptyLarge"];
+    expandedCell.mealRateView.fullSelectedImage = [[UIImage imageNamed:@"StarFullLarge"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     expandedCell.mealRateView.rating = mealInCell.mealRating;
     expandedCell.mealRateView.editable = NO;
     expandedCell.mealRateView.maxRating = 5;
     expandedCell.mealImageView.image = mealInCell.mealImage;
-    expandedCell.mealImageView.userInteractionEnabled = YES;
-    UITapGestureRecognizer *imageTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTapped:)];
-    imageTapRecognizer.numberOfTapsRequired = 1;
-    [expandedCell.mealImageView addGestureRecognizer:imageTapRecognizer];
+    expandedCell.mealImageView.userInteractionEnabled = NO;
+    expandedCell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return expandedCell;
 }
@@ -84,9 +82,5 @@
     return [[SOMealManager sharedInstance] findMealinCurrentSelection:aMeal].numberOfMealsOrdered;
 }
 
-- (void)imageTapped:(UITapGestureRecognizer *)sender
-{
-    [[NSNotificationCenter defaultCenter] postNotificationName:mealImageTappedNotification object:sender];
-}
 
 @end

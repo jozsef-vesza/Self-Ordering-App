@@ -70,20 +70,23 @@
     CGPoint tapPoint = [sender locationInView:self.mapImageView];
     for (SOCircleView *table in self.tables)
     {
+        [self clearBorders];
         if ([table pointInside:tapPoint withEvent:nil])
         {
+            table.layer.borderColor = [UIColor blackColor].CGColor;
+            table.layer.borderWidth = 3.0f;
             SOTable *tappedTable = self.location.tables[[self.tables indexOfObject:table]];
-            self.detailsLabel.text = [NSString stringWithFormat:@"Asztal %ld fő részére: %@", (long)tappedTable.numberOfSeats, tappedTable.free ? @"Szabad" : @"Foglalt"];
+            NSString *labelText = [NSString stringWithFormat:@"Asztal %ld fő részére: %@", (long)tappedTable.numberOfSeats, tappedTable.free ? @"Szabad" : @"Foglalt"];
+            NSMutableAttributedString *attributedLabelText = [[NSMutableAttributedString alloc] initWithString:labelText];
+            
+            [attributedLabelText addAttribute:NSForegroundColorAttributeName value:[self.view tintColor] range:NSMakeRange(0, attributedLabelText.length)];
+            [attributedLabelText addAttribute:NSForegroundColorAttributeName
+                                     value:[UIColor redColor]
+                                     range:[labelText rangeOfString:@"Foglalt"]];
             self.selectedTable = tappedTable;
             self.detailsLabel.textAlignment = NSTextAlignmentCenter;
-            if (tappedTable.free)
-            {
-                self.detailsLabel.backgroundColor = [UIColor greenColor];
-            }
-            else
-            {
-                self.detailsLabel.backgroundColor = [UIColor grayColor];
-            }
+            self.detailsLabel.backgroundColor = [UIColor whiteColor];
+            self.detailsLabel.attributedText = attributedLabelText;
             [self.view addSubview:self.detailsLabel];
             break;
         }
@@ -97,6 +100,13 @@
     
 }
 
+- (void)clearBorders
+{
+    for (SOCircleView *view in self.tables)
+    {
+        view.layer.borderWidth = 0;
+    }
+}
 
 - (IBAction)confirmButtonPressed:(UIBarButtonItem *)sender
 {
